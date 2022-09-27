@@ -6,3 +6,8 @@
 def binary_array_to_number(arr)
   arr.join.to_i
 end
+
+# Rock Paper Scissors! 8kyu
+# "scissors", "paper" --> "Player 1 won!"
+# "scissors", "rock" --> "Player 2 won!"
+# "paper", "paper" --> "Draw!"
