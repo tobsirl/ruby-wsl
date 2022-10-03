@@ -51,3 +51,7 @@ end
 def panagram?(string)
   string.downcase.scan(/[a-z]/).uniq.size == 26
 end
+
+def panagram?(string)
+  ('a'..'z').all? { |x| string.downcase.include? (x) } 
+end
