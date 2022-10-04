@@ -73,3 +73,8 @@ end
 def DNA_strand(dna)
   dna.gsub(/[ATGC]/, "A" => "T", "T" => "A", "C" => "G", "G" => "C")
 end
+
+$pairs = {'A'=>'T','T'=>'A','C'=>'G','G'=>'C'}
+def DNA_strand(dna)
+  dna.chars.map{ |c| $pairs[c] }.join
+end
