@@ -85,3 +85,15 @@ end
 def sum_two_smallest_numbers(numbers)
   numbers.sort[0] + numbers.sort[1]
 end
+
+def sum_two_smallest_numbers(numbers)
+  numbers.min(2).reduce(:+)
+end
+
+def sum_two_smallest_numbers a
+  a.min(2).sum
+end
+
+def sum_two_smallest_numbers(numbers)
+  numbers.sort[0..1].inject(:+)
+end
