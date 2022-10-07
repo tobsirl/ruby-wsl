@@ -78,3 +78,7 @@ $pairs = {'A'=>'T','T'=>'A','C'=>'G','G'=>'C'}
 def DNA_strand(dna)
   dna.chars.map{ |c| $pairs[c] }.join
 end
+
+# Sum of two lowest positive integers 7kyu
+# Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. 
+# No floats or non-positive integers will be passed.
