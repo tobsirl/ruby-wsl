@@ -106,3 +106,16 @@ def find_short(s)
   l = s.split(' ').sort_by { |word| word.length}[0].length
   return l # l: length of the shortest word
 end
+
+def find_short(s)
+  s.split.map(&:size).min
+end
+
+def find_short(s)
+  l = s.split.min_by(&:length).size
+  return l
+end
+
+def find_short(s)
+  return s.split(' ').map(&:length).min
+end
