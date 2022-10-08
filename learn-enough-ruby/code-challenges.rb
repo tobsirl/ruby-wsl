@@ -97,3 +97,12 @@ end
 def sum_two_smallest_numbers(numbers)
   numbers.sort[0..1].inject(:+)
 end
+
+# Shortest Word 7kyu
+# Simple, given a string of words, return the length of the shortest word(s).
+
+# String will never be empty and you do not need to account for different data types.
+def find_short(s)
+  l = s.split(' ').sort_by { |word| word.length}[0].length
+  return l # l: length of the shortest word
+end
