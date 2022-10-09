@@ -131,3 +131,11 @@ def hello(name = "")
     "Hello, #{name.downcase.capitalize}!"
   end
 end
+
+def hello(name='World')
+  "Hello, #{name.empty? ? 'World' : name.capitalize}!"
+end
+
+def hello(name="")
+  name.empty? ? "Hello, World!" : "Hello, #{name.downcase.capitalize}!"
+end
