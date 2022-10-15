@@ -209,3 +209,7 @@ def duty_free(price, discount, holiday_cost)
   result = holiday_cost / discounted_price
   result.floor
 end
+
+def duty_free(price, discount, holiday_cost)
+  ( holiday_cost/(price*discount/100.0) ).floor
+end
