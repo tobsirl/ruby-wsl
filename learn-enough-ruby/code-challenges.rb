@@ -203,3 +203,9 @@ end
 # you would save £1 per bottle. If your holiday cost £500, the answer you should return would be 500.
 
 # All inputs will be integers. Please return an integer. Round down.
+def duty_free(price, discount, holiday_cost)
+  discount_per = discount.to_f / 100
+  discounted_price = discount_per * price
+  result = holiday_cost / discounted_price
+  result.floor
+end
