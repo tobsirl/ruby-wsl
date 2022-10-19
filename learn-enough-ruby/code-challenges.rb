@@ -237,3 +237,15 @@ class String
     self.split.map { |word| word.capitalize }.join(" ")
   end
 end
+
+class String
+  def toJadenCase
+    self.split.map(&:capitalize).join(" ")
+  end
+end
+
+class String
+  def toJadenCase
+    split.map(&:capitalize).join(' ')
+  end
+end
