@@ -253,3 +253,6 @@ end
 # What is between? 8kyu
 # Complete the function that takes two integers (a, b, where a < b)
 # and return an array of all integers between the input parameters, including them.
+def between(a, b)
+  (a..b).to_a
+end
