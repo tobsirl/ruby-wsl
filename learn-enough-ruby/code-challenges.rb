@@ -277,3 +277,6 @@ end
 # Numbers ending with zeros are boring.
 # They might be fun in your world, but not here.
 # Get rid of them. Only the ending ones.
+def no_boring_zeros(num)
+  num.to_s.gsub(/0+$/, '').to_i
+end
