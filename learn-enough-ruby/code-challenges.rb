@@ -272,3 +272,8 @@ end
 def set_alarm(employed, vacation)
   employed && !vacation 
 end
+
+# No zeros for heros 8kyu
+# Numbers ending with zeros are boring.
+# They might be fun in your world, but not here.
+# Get rid of them. Only the ending ones.
