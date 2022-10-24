@@ -286,3 +286,7 @@ end
 def replace(s)
   s.tr('aeiouAEIOU', '!')
 end
+
+def replace(s)
+  s.gsub(/([aeiou])/i, '!') 
+end
