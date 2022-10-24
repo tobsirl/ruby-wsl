@@ -283,3 +283,6 @@ end
 
 # Exclamation marks series #11: Replace all vowel to exclamation mark in the sentence 8kyu
 # Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel.
+def replace(s)
+  s.tr('aeiouAEIOU', '!')
+end
