@@ -280,3 +280,6 @@ end
 def no_boring_zeros(num)
   num.to_s.gsub(/0+$/, '').to_i
 end
+
+# Exclamation marks series #11: Replace all vowel to exclamation mark in the sentence 8kyu
+# Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel.
