@@ -325,3 +325,6 @@ end
 # Third Angle of a Triangle 8kyu
 # You are given two interior angles (in degrees) of a triangle.
 # Write a function to return the 3rd.
+def other_angle(a, b)
+  ((a + b) - 180).abs
+end
