@@ -328,3 +328,7 @@ end
 def other_angle(a, b)
   ((a + b) - 180).abs
 end
+
+def other_angle(a, b)
+  180 - a - b
+end
