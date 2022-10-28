@@ -321,3 +321,7 @@ def rental_car_cost(days)
   discount = 50 if days >= 7
   days * 40 - discount
 end
+
+# Third Angle of a Triangle 8kyu
+# You are given two interior angles (in degrees) of a triangle.
+# Write a function to return the 3rd.
