@@ -13,3 +13,8 @@ puts another_hash.values
 another_hash.each do |key, value|
   puts "The class for key is #{key.class} and the value is #{value.class}"
 end
+
+my_details.each do |key, value|
+  puts "The class for key is #{key.class} and the value is #{value.class}"
+end
+
