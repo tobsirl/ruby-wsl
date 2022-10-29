@@ -1,4 +1,4 @@
-simple_hash = { "a" => 100, "b" => 200, "c" => 300 }
+simple_hash = { "a" => ["100", "150"], "b" => 200, "c" => 300 }
 my_details = { 'name' => 'paul', 'favcolor' => 'red' }
 puts my_details["favcolor"] # red
 
