@@ -21,4 +21,6 @@ another_hash = { a: 100, b: 200, c: 300 }
 hash = { :a => 1, :b => 2, :c => 3, :d => 4 }
 hash[:e] = "f"
 hash[:e] = "test"
-puts hash
+# puts hash
+
+hash.each { |key, value| puts "The key is #{key} and the value is #{value}" }
