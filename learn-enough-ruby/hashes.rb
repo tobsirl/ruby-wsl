@@ -8,3 +8,4 @@ puts my_details["favcolor"] # red
 puts simple_hash["a"] # => 100
 puts another_hash # => 100
 puts another_hash.keys
+puts another_hash.values
