@@ -340,3 +340,15 @@ def sum_of_minimums(numbers)
   min_numbers = numbers.map { |arr| arr.min }
   min_numbers.reduce(:+)
 end
+
+def sum_of_minimums(numbers)
+  numbers.sum(&:min)
+end
+
+def sum_of_minimums(numbers)
+  numbers.map(&:min).sum
+end
+
+def sum_of_minimums(numbers)
+  numbers.sum { |x| x.min }
+end
