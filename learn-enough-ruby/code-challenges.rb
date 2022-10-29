@@ -336,3 +336,7 @@ end
 # Sum of Minimums! 7kyu
 # Given a 2D ( nested ) list ( array, vector, .. ) of size m * n, 
 # your task is to find the sum of the minimum values in each row.
+def sum_of_minimums(numbers)
+  min_numbers = numbers.map { |arr| arr.min }
+  min_numbers.reduce(:+)
+end
