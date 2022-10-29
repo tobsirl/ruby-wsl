@@ -1,5 +1,5 @@
 simple_hash = { "a" => ["100", "150"], "b" => 200, "c" => 300 }
-my_details = { 'name' => 'paul', 'favcolor' => 'red' }
+my_details = { :name => 'paul', :favcolor => 'red' }
 another_hash = { a: 100, b: 200, c: 300 }
 puts my_details["favcolor"] # red
 
