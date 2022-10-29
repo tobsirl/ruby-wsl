@@ -9,3 +9,7 @@ puts simple_hash["a"] # => 100
 puts another_hash # => 100
 puts another_hash.keys
 puts another_hash.values
+
+another_hash.each do |key, value|
+  puts "The class for key is #{key.class} and the value is #{value.class}"
+end
