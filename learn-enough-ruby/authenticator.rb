@@ -22,7 +22,15 @@ count = 3
 
 while count != 0
   puts "Please enter your username"
+  name = gets.chomp
+  puts "Please enter your password"
+  password = gets.chomp
 
+
+  def method_name
+    
+  end
+  
 
   count = count - 1
 end
