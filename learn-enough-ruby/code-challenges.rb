@@ -361,3 +361,21 @@ def high_and_low(numbers)
   max_number = numbers.split(' ').map(&:to_i).sort.max
   "#{max_number} #{min_number}"
 end
+
+def high_and_low(numbers)
+  numbers.split.map(&:to_i).minmax.reverse.join(' ')
+end
+
+def high_and_low(numbers)
+  numbers = numbers.split.map(&:to_i)
+  "#{numbers.max} #{numbers.min}"
+end
+
+def high_and_low(numbers)
+  a = numbers.split.map(&:to_i).sort
+  "#{a.last} #{a.first}"
+end
+
+def high_and_low(numbers)
+  numbers.split.minmax_by(&:to_i).reverse.join(' ')
+end
