@@ -26,10 +26,19 @@ while attempts < 4
   print "Please enter your password: "
   password = gets.chomp
 
-  def method_name
-    
+  def authenticate_user(name, password, users)
+    users.each do |user|
+      if user[:username] = name && user[:password] == password
+        puts user
+        break
+      else
+        puts "Credentials were not correct"
+        break
+      end
+    end
   end
 
+  authenticate_user(name, password, users)
 
   puts "Press q to quit or any other key to continue: "
   input = gets.chomp.downcase
