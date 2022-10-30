@@ -1,6 +1,6 @@
 # users array where username and password are stored
 users = [
-  { username: "mashrur", password: "password1" },
+  { username: "paul", password: "password1" },
   { username: "jack", password: "password2" },
   { username: "arya", password: "password3" },
   { username: "jonshow", password: "password4" },
@@ -11,8 +11,19 @@ users = [
 
 puts "Welcome to the authenticator"
 25.times { print "-" }
+puts
 puts "This program will take input from the user and compare password"
 puts "If password is correct, you will get back the user object"
 
 # We will learn
 # Hash, Array, Branching, While loops and designing program execution flow
+
+count = 3
+
+while count != 0
+  puts "Please enter your username"
+
+
+  count = count - 1
+end
+
