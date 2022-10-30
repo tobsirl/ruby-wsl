@@ -24,3 +24,4 @@ hash[:e] = "test"
 # puts hash
 
 hash.each { |key, value| puts "The key is #{key} and the value is #{value}" }
+

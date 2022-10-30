@@ -352,3 +352,7 @@ end
 def sum_of_minimums(numbers)
   numbers.sum { |x| x.min }
 end
+
+# Highest and Lowest 7kyu
+# In this little assignment you are given a string of space separated numbers, 
+# and have to return the highest and lowest number.
