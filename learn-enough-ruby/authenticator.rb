@@ -18,9 +18,9 @@ puts "If password is correct, you will get back the user object"
 # We will learn
 # Hash, Array, Branching, While loops and designing program execution flow
 
-count = 3
+attempts = 1
 
-while count != 0
+while attempts < 4
   puts "Please enter your username"
   name = gets.chomp
   puts "Please enter your password"
@@ -32,6 +32,6 @@ while count != 0
   end
   
 
-  count = count - 1
+  attempts = attempts + 1
 end
 
