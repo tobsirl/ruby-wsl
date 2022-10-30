@@ -30,10 +30,9 @@ while attempts < 4
     list_of_users.each do |user|
       if user[:username] = name && user[:password] == password
         return user
-      else
-        return "Credentials were not correct"
       end
     end
+    "Credentials were not correct"
   end
 
   authenication = authenticate_user(name, password, users)
