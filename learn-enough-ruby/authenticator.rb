@@ -21,23 +21,20 @@ puts "If password is correct, you will get back the user object"
 attempts = 1
 
 while attempts < 4
-  puts "Press q to quit or any other key to continue: "
-  input = gets.chomp.downcase
-
-  if input == "q"
-    break
-  end
-
-  # puts "Please enter your username"
-  # name = gets.chomp
-  # puts "Please enter your password"
-  # password = gets.chomp
-
+  print "Please enter your username: "
+  name = gets.chomp
+  print "Please enter your password: "
+  password = gets.chomp
 
   def method_name
     
   end
-  
+
+
+  puts "Press q to quit or any other key to continue: "
+  input = gets.chomp.downcase
+
+  break if input == "q"
 
   attempts += 1
 end
