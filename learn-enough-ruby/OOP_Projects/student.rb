@@ -11,3 +11,5 @@ class Student
 end
 
 puts student = Student.new
+# student.first_name = "Paul"
+# puts student
