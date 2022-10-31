@@ -4,6 +4,10 @@ class Student
   @email
   @username
   @password
+
+  def to_s
+    "First name: #{@first_name}"
+  end
 end
 
-student = Student.new
+puts student = Student.new
