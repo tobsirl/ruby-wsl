@@ -1,36 +1,21 @@
 class Student
   attr_accessor :first_name, :last_name, :email, :username
 
-  def def initialize(first_name, last_name, username, email, password)
-    @first_name = first_name
-    @last_name = last_name
+  def initialize(firstname, lastname, username, email, password)
+    @first_name = firstname
+    @last_name = lastname
     @username = username
     @email = email
     @password = password
   end
 
-  @first_name
-  @last_name
-  @email
-  @username
-  @password
-
-  # setter method
-  # def first_name=(name)
-  #   @first_name = name
-  # end
-
-  # # getter method
-  # def first_name
-  #   @first_name
-  # end
-
   def to_s
-    "First name: #{@first_name}"
+    "First name: #{@first_name} Last name: #{@last_name} Username: #{@username} Email: #{@email}"
   end
 end
 
-paul = Student.new
-paul.first_name = "Paul"
-paul.last_name = "Smith"
-puts paul.first_name + " " + paul.last_name
+paul = Student.new("Paul", "Nguyen", "paulnguyen", "png@example.com", "password1")
+john = Student.new("John", "Smith", "johnsmith", "jsmith@example.com", "password2")
+
+puts paul
+puts john
