@@ -20,7 +20,6 @@ class Student
   end
 end
 
-puts paul = Student.new
-put paul
+paul = Student.new
 paul.first_name = "Paul"
 puts paul
