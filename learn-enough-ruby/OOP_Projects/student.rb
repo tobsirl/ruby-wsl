@@ -1,6 +1,13 @@
 class Student
-  attr_accessor :first_name, :last_name, :email
-  attr_reader :username
+  attr_accessor :first_name, :last_name, :email, :username
+
+  def def initialize(first_name, last_name, username, email, password)
+    @first_name = first_name
+    @last_name = last_name
+    @username = username
+    @email = email
+    @password = password
+  end
 
   @first_name
   @last_name
