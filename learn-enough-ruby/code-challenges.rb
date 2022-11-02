@@ -390,3 +390,7 @@ def find_difference(a, b)
   b_volume = b[0] * b[1] * b[2]
   (a_volume - b_volume).abs
 end
+
+def find_difference(a, b)
+  (a.inject(:*) - b.inject(:*)).abs
+end
