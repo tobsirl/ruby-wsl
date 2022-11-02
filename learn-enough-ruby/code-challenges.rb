@@ -385,3 +385,8 @@ end
 # a and b. Each list will consist of 3 positive integers above 0, 
 # representing the dimensions of cuboids a and b. 
 # You must find the difference of the cuboids' volumes regardless of which is bigger.
+def find_difference(a, b)
+  a_volume = a[0] * a[1] * a[2]
+  b_volume = b[0] * b[1] * b[2]
+  a_volume - b_volume
+end
