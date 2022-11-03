@@ -2,7 +2,7 @@ module Crud
   require 'bcrypt'
   puts "Module CRUD activated"
 
-  def create_hash_digest(password)
+  def Crud.create_hash_digest(password)
     BCrypt::Password.create(password)
   end
 
@@ -10,7 +10,7 @@ module Crud
     BCrypt::Password.new(password)
   end
 
-  def create_secure_users(list_of_users)
+  def Crud.create_secure_users(list_of_users)
     list_of_users.each do |user_record|
       user_record[:password] = create_hash_digest(user_record[:password])
     end
