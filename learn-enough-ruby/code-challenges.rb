@@ -404,3 +404,11 @@ def add_length(str)
   end
   arr
 end
+
+def add_length(str)
+  str.split.map { |word| "#{word} #{word.length}" }
+end
+
+def add_length(str)
+  str.split.map { |s| "#{s} #{s.size}" }
+end
