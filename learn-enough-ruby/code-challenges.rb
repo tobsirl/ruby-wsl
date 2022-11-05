@@ -397,3 +397,10 @@ end
 
 # Add Length 8kyu
 # What if we need the length of the words separated by a space to be added at the end of that same word and have it returned as an array?
+def add_length(str)
+  arr = []
+  str.split.each do |word|
+    arr.push("#{word} #{word.length}")
+  end
+  arr
+end
