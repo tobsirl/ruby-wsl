@@ -7,3 +7,16 @@ chainring = 30
 cog = 27
 ratio = chainring / cog.to_f
 puts ratio # 1.1111111111111112
+
+class Gear
+  attr_reader :charing, :cog
+
+  def initialize(chainring, cog)
+    @chainring = chainring
+    @cog = cog
+  end
+  
+  def ratio
+    chainring / cog.to_f
+  end
+end
