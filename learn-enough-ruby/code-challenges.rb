@@ -414,3 +414,12 @@ def add_length(str)
 end
 
 # What's the real floor? 8kyu
+def get_real_floor(n)
+  if n >= 14
+    n - 2
+  elsif n >= 1 && n < 13
+    n - 1
+  else
+    n
+  end
+end
