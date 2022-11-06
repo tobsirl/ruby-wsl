@@ -423,3 +423,9 @@ def get_real_floor(n)
     n
   end
 end
+
+def get_real_floor(n)
+  return n if n <= 0 
+  return n-1 if n>=1 && n<=12
+  return n-2 if n>=14
+end
