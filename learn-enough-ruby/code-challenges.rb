@@ -412,3 +412,5 @@ end
 def add_length(str)
   str.split.map { |s| "#{s} #{s.size}" }
 end
+
+# What's the real floor? 8kyu
