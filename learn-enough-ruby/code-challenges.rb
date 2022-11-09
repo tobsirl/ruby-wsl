@@ -443,3 +443,6 @@ end
 def odd_or_even(array)
   array.sum.even? ? 'even' : 'odd'
 end
+
+# Enumerable Magic - Does My List Include This? 8kyu
+# Create a method that accepts a list and an item, and returns true if the item belongs to the list, otherwise false.
