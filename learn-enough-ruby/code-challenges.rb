@@ -449,3 +449,7 @@ end
 def include? array, item
   array.include? item
 end
+
+def include? array, item
+  array.any? { |x| x == item}
+end
