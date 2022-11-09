@@ -112,3 +112,6 @@ class ObscuringReferences
   end
   # ... many other methods that index into the array
 end
+
+# rim and tire sizes (now in milimeters!) in a 2D array
+@data = [[622, 20], [622, 23], [559, 30], [559, 40]]
