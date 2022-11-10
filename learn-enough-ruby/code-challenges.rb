@@ -463,3 +463,21 @@ def find_it(seq)
   seq.each { |x| freq[x] += 1 }
   freq.map{ |key, value| return key if value.odd? }
 end
+
+def find_it(seq)
+  seq.detect { |n| seq.count(n).odd? }
+end
+
+def find_it(seq)
+  seq.reduce(:^)
+end
+
+def find_it(seq)
+  seq.uniq.each do |val|
+    return val if seq.count(val).odd?
+  end
+end
+
+def find_it(seq)
+  seq.find{|c| seq.count(c).odd? }
+end
