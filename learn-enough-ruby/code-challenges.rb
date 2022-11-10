@@ -458,3 +458,8 @@ end
 # Given an array of integers, find the one that appears an odd number of times.
 
 # There will always be only one integer that appears an odd number of times.
+def find_it(seq)
+  freq = Hash.new(0)
+  seq.each { |x| freq[x] += 1 }
+  freq.map{ |key, value| return key if value.odd? }
+end
