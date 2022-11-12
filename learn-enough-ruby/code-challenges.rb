@@ -489,3 +489,10 @@ end
 def move (position, roll)
   position + (roll * 2)
 end
+
+# Sort the odd 6kyu
+# You will be given an array of numbers. You have to sort the odd numbers in ascending order while leaving the even numbers at their original positions.
+def sort_array(source_array)
+  odd_sorted = source_array.select(&:odd?).sort
+  source_array.map { |input| input.even? ? input : odd_sorted.shift }
+end
