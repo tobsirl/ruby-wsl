@@ -496,3 +496,6 @@ def sort_array(source_array)
   odd_sorted = source_array.select(&:odd?).sort
   source_array.map { |input| input.even? ? input : odd_sorted.shift }
 end
+
+# Reversing Words in a String 8kyu
+# You need to write a function that reverses the words in a given string. A word can also fit an empty string.
