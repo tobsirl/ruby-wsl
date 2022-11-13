@@ -17,6 +17,7 @@ class Gear
   end
 end
 
+# Wheel hasn't changed
 class Wheel
   attr_reader :rim, :tire
   def initialize(rim, tire)
@@ -29,3 +30,4 @@ class Wheel
   end
 end
 
+puts Gear.new(52, 11, 26, 1.5).gear_inches # 137.0909090909091
