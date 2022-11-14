@@ -513,3 +513,7 @@ def stray (numbers)
   most_common_number = count.sort_by { |k, v| v}.last[0]
   numbers.find { |n| n != most_common_number }
 end
+
+def stray (numbers)
+  numbers.reduce(&:^)
+end
