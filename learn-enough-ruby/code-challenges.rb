@@ -514,6 +514,12 @@ def stray (numbers)
   numbers.find { |n| n != most_common_number }
 end
 
+def stray(numbers)
+  most_common_number = numbers.max_by { |n| numbers.count(n) }
+  numbers.find { |n| n != most_common_number }
+end
+
 def stray (numbers)
   numbers.reduce(&:^)
 end
+
