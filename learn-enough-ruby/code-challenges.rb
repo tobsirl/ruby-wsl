@@ -507,3 +507,9 @@ end
 # You are given an odd-length array of integers, in which all of them are the same, except for one single number.
 
 # Complete the method which accepts such an array, and returns that single different number.
+def stray (numbers)
+  count = Hash.new(0)
+  numbers.each { |n| count[n] += 1  }
+  most_common_number = count.sort_by { |k, v| v}.last[0]
+  numbers.find { |n| n != most_common_number }
+end
