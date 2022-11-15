@@ -29,4 +29,12 @@ Every dependency is like a little dot of glue that causes your class to stick to
 
 #### Injecting Dependencies
 
-Referring to another class by name is a dependency. Injecting a dependency means passing it in as an argument. This is called dependency injection.
+Referring to another class by name is a dependency. Injecting a dependency means passing it in as an argument. This is called dependency injection
+
+#### Isolating Dependencies
+
+In certain cases, it may not be possible to remove a dependency due to severe constraints. Therefore, if you cannot remove a dependency, you should isolate it within a class.
+
+**Isolate Instance Creation**
+
+If you are so constrained that you cannot change the code to inject a Wheel into a Gear, you should isolate the creation of a new Wheel inside the Gear class. The intent is to explicitly expose the dependency while reducing its reach into your class. The next two examples illustrate this idea.
