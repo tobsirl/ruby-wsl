@@ -9,11 +9,15 @@ class Person
   def print_name
     puts "Name: #{@first_name} #{@last_name}"
   end
-  
+
+  def age
+    puts "Age: #{@age}"
+  end
 end
 
-puts paul = Person.new("Paul", "Smith", 25)
+paul = Person.new("Paul", "Smith", 25)
 
 paul.last_name = "Tobin"
 
 puts paul.print_name
+puts paul.age
