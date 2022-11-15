@@ -528,3 +528,7 @@ end
 def invert(list)
   list.map { |n| -n }
 end
+
+def invert(list)
+  list.map(&:-@)
+end
