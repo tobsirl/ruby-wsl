@@ -538,3 +538,11 @@ end
 def solution(string)
   string.split(/(?=[A-Z])/).join(' ')
 end
+
+def solution(string)
+  string.gsub(/(?=[A-Z])/, ' ')
+end
+
+def solution(string)
+  string.chars.map { |s| s == s.downcase ? s : " #{s}" }.join
+end
