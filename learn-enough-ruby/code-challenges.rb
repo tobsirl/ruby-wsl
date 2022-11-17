@@ -558,3 +558,10 @@ def chromosome_check(sperm)
   end
 end
 
+def chromosome_check(sperm)
+  "Congratulations! You're going to have a #{sperm.include?('Y') ? 'son' : 'daughter'}."
+end
+
+def chromosome_check(sperm)
+  return sperm == "XY" ? "Congratulations! You're going to have a son." : "Congratulations! You're going to have a daughter.";
+end
