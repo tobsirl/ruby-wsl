@@ -574,3 +574,11 @@ end
 def xor(a,b)
   a == b ? false : true
 end
+
+def xor(a,b)
+  a ^ b
+end
+
+def xor(a,b)
+  a!=b
+end
