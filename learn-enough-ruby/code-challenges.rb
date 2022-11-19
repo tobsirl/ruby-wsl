@@ -591,3 +591,7 @@ end
 def two_sort(s)
   s.sort.first.chars.join("***")
 end
+
+def two_sort(s)
+  s.min.chars.join('***')
+end
