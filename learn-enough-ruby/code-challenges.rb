@@ -595,3 +595,6 @@ end
 def two_sort(s)
   s.min.chars.join('***')
 end
+
+# Beginner Series #2 Clock 8kyu
+# 
