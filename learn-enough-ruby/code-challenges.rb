@@ -597,4 +597,4 @@ def two_sort(s)
 end
 
 # Beginner Series #2 Clock 8kyu
-# 
+# Your task is to write a function which returns the time since midnight in milliseconds.
