@@ -608,4 +608,6 @@ end
 
 # Multiple of index 8kyu
 # Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
-
+def multiple_of_index arr
+  arr.filter.with_index { |el, idx| idx == 0 ? nil : el % idx == 0 }
+end 
