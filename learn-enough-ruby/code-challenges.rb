@@ -611,3 +611,19 @@ end
 def multiple_of_index arr
   arr.filter.with_index { |el, idx| idx == 0 ? nil : el % idx == 0 }
 end 
+
+def multiple_of_index a
+  a.select.with_index { |n, i| i != 0 && n % i == 0 }
+end
+
+def multiple_of_index arr
+  arr.select.with_index {|val, index| index.nonzero? && val % index == 0 }
+end
+
+def multiple_of_index(xs)
+  xs.select.with_index { |x, i| i.positive? && x % i == 0 }
+end
+
+def multiple_of_index(array)
+  array.select.with_index { |x,i| x % i == 0 unless i.zero?}
+end
