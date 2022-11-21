@@ -605,3 +605,7 @@ end
 def past(h, m, s)
   (h * 3600 + m * 60 + s) * 1000
 end
+
+# Multiple of index 8kyu
+# Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
+
