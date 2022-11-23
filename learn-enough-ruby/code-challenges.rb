@@ -650,3 +650,70 @@ def alphabet_position(text)
   letter_to_number = ('a'..'z').zip(1..26).to_h 
   text.downcase.each_char.map {|c| letter_to_number[c] }.compact.join(' ')
 end
+
+def alphabet_position(text)
+  text.gsub(/[^a-z]/i, '').chars.map{ |c| c.downcase.ord - 96 }.join(' ')
+end
+
+def alphabet_position(text)
+  result = ''
+  text.split('').each do |c|
+    case c.downcase
+      when 'a'
+        result += '1 '
+      when 'b'
+        result += '2 '
+      when 'c'
+        result += '3 '
+      when 'd'
+        result += '4 '
+      when 'e'
+        result += '5 '
+      when 'f'
+        result += '6 '
+      when 'g'
+        result += '7 '
+      when 'h'
+        result += '8 '
+      when 'i'
+        result += '9 '
+      when 'j'
+        result += '10 '
+      when 'k'
+        result += '11 '
+      when 'l'
+        result += '12 '
+      when 'm'
+        result += '13 '
+      when 'n'
+        result += '14 '
+      when 'o'
+        result += '15 '
+      when 'p'
+        result += '16 '
+      when 'q'
+        result += '17 '
+      when 'r'
+        result += '18 '
+      when 's'
+        result += '19 '
+      when 't'
+        result += '20 '
+      when 'u'
+        result += '21 '
+      when 'v'
+        result += '22 '
+      when 'w'
+        result += '23 '
+      when 'x'
+        result += '24 '
+      when 'y'
+        result += '25 '
+      when 'z'
+        result += '26 '
+      else
+        result = result
+    end
+  end
+  result[0..-2]
+end
