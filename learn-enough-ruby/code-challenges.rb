@@ -646,3 +646,7 @@ end
 # Replace With Alphabet Position 6kyu
 # In this kata you are required to, given a string, replace every letter with its position in the alphabet.
 # If anything in the text isn't a letter, ignore it and don't return it.
+def alphabet_position(text)
+  letter_to_number = ('a'..'z').zip(1..26).to_h 
+  text.downcase.each_char.map {|c| letter_to_number[c] }.compact.join(' ')
+end
