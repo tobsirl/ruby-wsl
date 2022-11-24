@@ -717,3 +717,8 @@ def alphabet_position(text)
   end
   result[0..-2]
 end
+
+# How old will I be in 2099? 8kyu
+# Provide output in this format: For dates in the future: "You are ... year(s) old." 
+# For dates in the past: "You will be born in ... year(s)." 
+# If the year of birth equals the year requested return: "You were born this very year!"
