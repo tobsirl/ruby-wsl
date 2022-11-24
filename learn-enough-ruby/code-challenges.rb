@@ -722,3 +722,12 @@ end
 # Provide output in this format: For dates in the future: "You are ... year(s) old." 
 # For dates in the past: "You will be born in ... year(s)." 
 # If the year of birth equals the year requested return: "You were born this very year!"
+def calculate_age(year_of_birth, current_year)
+  if year_of_birth == current_year
+    "You were born this very year!"
+  elsif current_year > year_of_birth
+    "You are #{current_year - year_of_birth} year#{current_year - year_of_birth == 1 ? nil : "s"} old."
+  elsif current_year < year_of_birth
+    "You will be born in #{year_of_birth - current_year} year#{year_of_birth - current_year == 1 ? nil : "s"}."
+  end
+end
