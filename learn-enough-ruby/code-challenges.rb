@@ -752,3 +752,12 @@ end
 # if that character appears only once in the original string, or ")" 
 # if that character appears more than once in the original string. 
 # Ignore capitalization when determining if a character is a duplicate.
+def duplicate_encode(word)
+  word.downcase!
+  arr_of_letters = word.split("")
+  
+  duplicates = Hash.new(0)
+  arr_of_letters.each { |element| duplicates[element] += 1 }
+  
+  arr_of_letters.collect! {|x| duplicates[x] > 1 ? ")" : "("}.join
+end
