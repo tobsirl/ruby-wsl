@@ -765,3 +765,9 @@ end
 # Consecutive Strings 6kyu
 # You are given an array(list) strarr of strings and an integer k. 
 # Your task is to return the first longest string consisting of k consecutive strings taken in the array.
+def longest_consec(strarr, k)
+  return "" if k < 1
+  return "" if strarr.length < k
+  
+  return strarr.each_cons(k).map(&:join).max_by(&:size)
+end
