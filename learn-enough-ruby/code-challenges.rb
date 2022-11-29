@@ -810,3 +810,11 @@ def find_uniq(arr)
   end
   arr.each_cons(2) { |x, y| return y if y != x }
 end
+
+def find_uniq(arr)
+  arr.uniq.each { |x| return x if arr.count(x) == 1 }
+end
+
+def find_uniq(arr)
+  arr.uniq.min_by { |n| arr.count(n) }
+end
