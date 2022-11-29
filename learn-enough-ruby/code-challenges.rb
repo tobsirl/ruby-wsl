@@ -801,3 +801,12 @@ class String
     swapcase
   end
 end
+
+# Find the unique number 6kyu
+def find_uniq(arr)
+  return nil if arr.size < 3
+  if arr[0] != arr[1]
+    return arr[1] == arr[2] ? arr[0] : arr[1]
+  end
+  arr.each_cons(2) { |x, y| return y if y != x }
+end
