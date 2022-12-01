@@ -820,3 +820,12 @@ def find_uniq(arr)
 end
 
 # Factorial 7kyu
+def factorial(n)
+  return 0 if n < 0
+  
+  if n <= 1
+        1
+    else
+        n * factorial(n - 1)
+    end
+end
