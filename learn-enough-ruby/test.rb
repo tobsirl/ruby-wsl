@@ -8,3 +8,5 @@ empty_hash = {}
 end
 
 puts empty_hash
+
+puts "abcdef".each_char.map { |c| empty_hash[c] }.reduce(:+)
