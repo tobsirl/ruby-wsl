@@ -818,3 +818,5 @@ end
 def find_uniq(arr)
   arr.uniq.min_by { |n| arr.count(n) }
 end
+
+# Factorial 7kyu
