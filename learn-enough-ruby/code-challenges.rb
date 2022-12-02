@@ -852,3 +852,7 @@ def century(year)
       (year - (year % 100))/100 + 1
     end  
  end
+
+def century(year)
+  ( year / 100.0 ).ceil
+end
