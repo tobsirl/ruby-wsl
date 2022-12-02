@@ -837,3 +837,6 @@ end
 def factorial(n)
   n < 2 ? 1 : n * factorial(n-1)
 end
+
+# Century From Year 8kyu
+# The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and including the year 200, etc.
