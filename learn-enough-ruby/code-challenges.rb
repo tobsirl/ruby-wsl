@@ -840,3 +840,7 @@ end
 
 # Century From Year 8kyu
 # The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and including the year 200, etc.
+def century(year)
+  return 1 if year.to_s.length < 4
+  year.to_s[year.to_s.length - 2, 2].to_i > 0 ? year.to_s[0..1].to_i + 1 : year.to_s[0..1].to_i  
+end
