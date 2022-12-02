@@ -844,3 +844,11 @@ def century(year)
   return 1 if year.to_s.length < 4
   year.to_s[year.to_s.length - 2, 2].to_i > 0 ? year.to_s[0..1].to_i + 1 : year.to_s[0..1].to_i  
 end
+
+def century(year)
+  if (year % 100) == 0
+      year/100
+    else 
+      (year - (year % 100))/100 + 1
+    end  
+ end
