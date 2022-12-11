@@ -41,3 +41,15 @@ const isAnagram = (test, original) => {
   const sort = (str) => str.toLowerCase().split('').sort().join('');
   return sort(test) === sort(original);
 };
+
+String.prototype.sortLetters = function() {
+  return this.toLowerCase().split('').sort().join('');
+}
+
+var isAnagram = function(test, original) {
+  return test.sortLetters() == original.sortLetters();
+};
+
+function isAnagram (test, original) {
+	return test.toLowerCase().split("").sort().join("") === original.toLowerCase().split("").sort().join("");
+}
