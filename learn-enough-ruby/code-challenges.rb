@@ -864,3 +864,8 @@ def validate_pin(pin)
   pin.match(/\A\d{4}\z|\A\d{6}\z/) ? true : false
 end
 
+# Anagram Detection 7kyu
+# Write a function isAnagram to return true if the two words contain the same letters.
+def is_anagram(test, original)
+  test.downcase.chars.sort == original.downcase.chars.sort
+end
