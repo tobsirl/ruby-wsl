@@ -863,3 +863,15 @@ end
 def validate_pin(pin)
   pin.match(/\A\d{4}\z|\A\d{6}\z/) ? true : false
 end
+
+String.prototype.sortLetters = function() {
+  return this.toLowerCase().split('').sort().join('');
+}
+
+var isAnagram = function(test, original) {
+  return test.sortLetters() == original.sortLetters();
+};
+
+function isAnagram (test, original) {
+	return test.toLowerCase().split("").sort().join("") === original.toLowerCase().split("").sort().join("");
+}
