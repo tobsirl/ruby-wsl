@@ -869,3 +869,9 @@ end
 def is_anagram(test, original)
   test.downcase.chars.sort == original.downcase.chars.sort
 end
+
+# Remove anchor from URL 7kyu
+# Complete the function/method so that it returns the url with anything after the anchor (#) removed.
+def remove_url_anchor(url)
+  url.split("#").first
+end
