@@ -875,3 +875,9 @@ end
 def remove_url_anchor(url)
   url.split("#").first
 end
+
+# Count the divisors of a number 7kyu
+# Count the number of divisors of a positive integer n.
+def divisors(n)
+  (1..n).count { |x| n % x == 0 }
+end
