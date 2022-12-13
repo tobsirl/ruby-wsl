@@ -42,14 +42,29 @@ const isAnagram = (test, original) => {
   return sort(test) === sort(original);
 };
 
-String.prototype.sortLetters = function() {
+String.prototype.sortLetters = function () {
   return this.toLowerCase().split('').sort().join('');
-}
+};
 
-var isAnagram = function(test, original) {
+var isAnagram = function (test, original) {
   return test.sortLetters() == original.sortLetters();
 };
 
-function isAnagram (test, original) {
-	return test.toLowerCase().split("").sort().join("") === original.toLowerCase().split("").sort().join("");
+function isAnagram(test, original) {
+  return (
+    test.toLowerCase().split('').sort().join('') ===
+    original.toLowerCase().split('').sort().join('')
+  );
+}
+
+// Count the divisors of a number 7kyu
+// Count the number of divisors of a positive integer n.
+function getDivisorsCnt(n) {
+  let count = 0;
+  for (let i = 1; i <= n; i++) {
+    if (n % i === 0) {
+      count++;
+    }
+  }
+  return count;
 }
