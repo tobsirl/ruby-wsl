@@ -74,4 +74,10 @@ function getDivisorsCnt(n) {
 // If no arguments are given, ball objects should instantiate with a "ball type" of "regular."
 var Ball = function (ballType) {
   this.ballType = ballType || 'regular';
+};
+
+class Ball {
+  constructor(ballType = 'regular') {
+    this.ballType = ballType;
+  }
 }
