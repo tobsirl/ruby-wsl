@@ -905,3 +905,10 @@ end
 def unique_in_order(iterable)
   (iterable.is_a?(String) ? iterable.chars : iterable).chunk { |x| x }.map(&:first)
 end
+
+# Printer Errors 7kyu
+# In a factory a printer prints labels for boxes. For one kind of boxes the printer has to use colors which, for the sake of simplicity, are named with letters from a to m.
+def printer_error(s)
+  "#{s.count("n-z")}/#{s.length}"
+end
+
