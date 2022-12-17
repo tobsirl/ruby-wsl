@@ -912,3 +912,11 @@ def printer_error(s)
   "#{s.count("n-z")}/#{s.length}"
 end
 
+# Beginner Series #3 Sum of Numbers
+# Given two integers a and b, which can be positive or negative, find the sum of all the numbers between including them too and return it.
+# Note: a and b are not ordered!
+def get_sum(a,b)
+  return 0 if a == b
+  a, b = b, a if a > b
+  (a..b).reduce(:+)
+end
