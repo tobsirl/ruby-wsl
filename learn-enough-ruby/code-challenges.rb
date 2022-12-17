@@ -920,3 +920,7 @@ def get_sum(a,b)
   a, b = b, a if a > b
   (a..b).reduce(:+)
 end
+
+def get_sum(a,b)
+  return a < b ? (a..b).reduce(:+) : (b..a).reduce(:+) 
+end
