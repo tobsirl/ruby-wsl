@@ -924,3 +924,12 @@ end
 def get_sum(a,b)
   return a < b ? (a..b).reduce(:+) : (b..a).reduce(:+) 
 end
+
+# Remove the minimum 7kyu
+# Given an array of integers, remove the smallest value. Do not mutate the original array/list. 
+# If there are multiple elements with the same value, remove the one with a lower index. 
+# If you get an empty array/list, return an empty array/list.
+def remove_smallest(numbers)
+  numbers.delete_at(numbers.index(numbers.min)) unless numbers.empty?
+  numbers
+end
