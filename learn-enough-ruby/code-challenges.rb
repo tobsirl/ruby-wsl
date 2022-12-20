@@ -947,3 +947,12 @@ end
 def stairs_in_20(stairs)
   stairs.flatten.reduce(:+) * 20
 end
+
+# N-th Power 8kyu
+# This kata is from check py.checkio.org
+# You are given an array with positive numbers and a non-negative number N. 
+# You should find the N-th power of the element in the array with the index N. 
+# If N is outside of the array, then return -1. Don't forget that the first element has the index 0.
+def index(array, n)
+  array[n] ** n rescue -1
+end
