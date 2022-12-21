@@ -956,3 +956,9 @@ end
 def index(array, n)
   array[n] ** n rescue -1
 end
+
+# Flatten and sort an array 7kyu
+# Given a two-dimensional array of integers, return the flattened version of the array with all the integers in the sorted (ascending) order.
+def flatten_and_sort(array)
+  array.flatten.sort
+end
