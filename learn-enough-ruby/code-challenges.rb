@@ -983,3 +983,10 @@ end
 def multi_table(number)
   (1..10).map { |i| "#{i} * #{number} = #{i*number}" }.join("\n")
 end
+
+# Build Tower 6kyu
+# Build a pyramid-shaped tower, as an array/list of strings, 
+# given a positive integer number of floors. A tower block is represented with "*" character.
+def tower_builder(n_floors)
+  (1..n_floors).map { |i| "*" * (2*i-1) }.map { |i| i.center(2*n_floors-1) }
+end
