@@ -1037,3 +1037,12 @@ def how_much_i_love_you(nb_petals)
       "not at all"
   end
 end
+
+# Alternate capitalization 7kyu
+# Given a string, capitalize the letters that occupy even indexes and odd indexes separately, 
+# and return as shown below. Index 0 will be considered even.
+# For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for more examples.
+# The input will be a lowercase string with no spaces.
+def capitalize(s)
+  [s.chars.map.with_index { |c, i| i.even? ? c.upcase : c }.join, s.chars.map.with_index { |c, i| i.odd? ? c.upcase : c }.join]
+end
