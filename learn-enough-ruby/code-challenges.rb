@@ -1058,3 +1058,14 @@ end
 def title_case(title, minor_words = '')
   title.capitalize.split.map { |word| minor_words.downcase.split.include?(word) ? word : word.capitalize }.join(' ')
 end
+
+# Lario and Muigi Pipe Problem 8kyu
+# #Issue Looks like some hoodlum plumber and his brother has been running around and damaging your stages again.
+# The pipes connecting your level's stages together need to be fixed before you recieve any more complaints.
+# #Task Given the a list of numbers, return the list so that the values increment by 1 for each index up to the maximum value.
+# #Example:
+# Input: 1,3,5,6,7,8
+# Output: 1,2,3,4,5,6,7,8
+def pipe_fix(numbers)
+  (numbers.min..numbers.max).to_a
+end
