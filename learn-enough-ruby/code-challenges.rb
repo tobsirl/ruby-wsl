@@ -1077,3 +1077,10 @@ class SequenceSum
     (n < 0) ? "#{n}<0" : (n == 0) ? "0=0" : "#{(0..n).to_a.join("+")} = #{(0..n).to_a.sum}"
   end
 end
+
+# Grasshopper - Terminal game combat function 8kyu
+# Create a combat function that takes the player's current health and the amount of damage recieved, 
+# and returns the player's new health. Health can't be less than 0.
+def combat(health, damage)
+  health - damage > 0 ? health - damage : 0
+end
