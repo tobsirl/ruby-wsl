@@ -1091,3 +1091,9 @@ end
 def even_numbers(arr, n)
   arr.select(&:even?).last(n)
 end
+
+# 5 without numbers ! 8kyu
+# Write a function that always returns 5
+def unusual_five
+  "five!".length
+end
