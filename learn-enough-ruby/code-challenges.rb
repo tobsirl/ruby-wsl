@@ -1108,3 +1108,11 @@ end
 def row_weights(array)
   array.each_slice(2).map { |a, b| [a.to_i, b.to_i] }.transpose.map(&:sum)
 end
+
+# Isograms 7kyu
+# An isogram is a word that has no repeating letters, consecutive or non-consecutive.
+# Implement a function that determines whether a string that contains only letters is an isogram.
+# Assume the empty string is an isogram. Ignore letter case.
+def is_isogram(string)
+  string.downcase.chars.uniq == string.downcase.chars
+end
