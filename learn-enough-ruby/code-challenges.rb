@@ -1133,3 +1133,10 @@ end
 def find_next_square(sq)
   (Math.sqrt(sq) % 1).zero? ? (Math.sqrt(sq) + 1)**2 : -1
 end
+
+# Formating decimal places #0 8kyu
+# Each floating-point number should be formatted that only the first two decimal places are returned.
+# You don't need to check whether the input is a valid number because only valid numbers are used in the tests.
+def two_decimal_places(n)
+  n.round(2)
+end
