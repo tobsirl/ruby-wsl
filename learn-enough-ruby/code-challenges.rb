@@ -1148,3 +1148,9 @@ end
 def bumps(road)
   road.count('n') > 15 ? 'Car Dead' : 'Woohoo!'
 end
+
+# Exclamation marks series #2: Remove all exclamation marks from the end of sentence 8kyu
+# Remove all exclamation marks from the end of sentence.
+def remove(s)
+  s.gsub(/!+$/, '')
+end
