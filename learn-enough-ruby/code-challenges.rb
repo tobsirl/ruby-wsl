@@ -1154,3 +1154,11 @@ end
 def remove(s)
   s.gsub(/!+$/, '')
 end
+
+# Find the position! 8kyu
+# When provided with a letter, return its position in the alphabet.
+# Input :: "a"
+# Ouput :: "Position of alphabet: 1"
+def position(alphabet)
+  "Position of alphabet: #{alphabet.ord - 96}"
+end
