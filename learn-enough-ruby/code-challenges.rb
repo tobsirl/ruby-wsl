@@ -1173,3 +1173,9 @@ end
 def min_max(lst)
   [lst.min, lst.max]
 end
+
+# Bin to Decimal 8kyu
+# Complete the function which converts a binary number (given as a string) to a decimal number.
+def bin_to_decimal(str)
+  str.to_i(2)
+end
