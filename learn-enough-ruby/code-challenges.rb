@@ -1179,3 +1179,9 @@ end
 def bin_to_decimal(str)
   str.to_i(2)
 end
+
+# Round up to the next multiple of 5 7kyu
+# Given an integer as input, can you round it to the next (meaning, "higher") 5?
+def round_to_next5(n)
+  n % 5 == 0 ? n : n + (5 - n % 5)
+end
