@@ -1185,3 +1185,10 @@ end
 def round_to_next5(n)
   n % 5 == 0 ? n : n + (5 - n % 5)
 end
+
+# Two to One 7kyu
+# Take 2 strings s1 and s2 including only letters from ato z. Return a new sorted string, the longest possible, containing distinct letters,
+# each taken only once - coming from s1 or s2.
+def longest(s1, s2)
+  (s1 + s2).chars.uniq.sort.join
+end
