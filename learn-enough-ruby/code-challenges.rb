@@ -1192,3 +1192,9 @@ end
 def longest(s1, s2)
   (s1 + s2).chars.uniq.sort.join
 end
+
+# Convert to Binary 8kyu
+# Given a non-negative integer n, write a function to_binary/ToBinary which returns that number in a binary format.
+def to_binary(n)  
+  n.to_s(2).to_i
+end
