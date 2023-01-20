@@ -1206,3 +1206,9 @@ end
 def increment_string(input)
   input.sub(/\d*$/) { |n| n.empty? ? 1 : n.succ }
 end
+
+# Vowel remover 8kyu
+# Create a function called shortcut to remove all the lowercase vowels in a given string.
+def shortcut(s)
+  s.delete('aeiou')
+end
