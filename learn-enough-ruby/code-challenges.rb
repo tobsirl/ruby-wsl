@@ -1212,3 +1212,9 @@ end
 def shortcut(s)
   s.delete('aeiou')
 end
+
+# Largest pair sum in array 7kyu
+# Given a sequence of numbers, find the largest pair sum in the sequence.
+def largest_pair_sum(numbers)
+  numbers.sort.last(2).sum
+end
