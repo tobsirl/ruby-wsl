@@ -1218,3 +1218,9 @@ end
 def largest_pair_sum(numbers)
   numbers.sort.last(2).sum
 end
+
+# Mumbling 7kyu
+# This time no story, no theory. The examples below show you how to write function accum:
+def accum(s)
+  s.chars.map.with_index { |c, i| c.upcase + c.downcase * i }.join('-')
+end
