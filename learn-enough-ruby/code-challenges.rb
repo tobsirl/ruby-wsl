@@ -1233,3 +1233,14 @@ end
 def nb_dig(n, d)
   (0..n).map { |i| i**2 }.join.count(d.to_s)
 end
+
+# The Vowel Code 6kyu
+# Step 1: Create a function called encode() to replace all the lowercase vowels in a given string with numbers according to the following pattern:
+def encode(string)
+  string.tr('aeiou', '12345')
+end
+
+# Step 2: Now create a function called decode() to turn the numbers back into vowels according to the same pattern shown above.
+def decode(string)
+  string.tr('12345', 'aeiou')
+end
