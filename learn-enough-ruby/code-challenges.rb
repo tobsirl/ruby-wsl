@@ -1244,3 +1244,9 @@ end
 def decode(string)
   string.tr('12345', 'aeiou')
 end
+
+# Your order, please 6kyu
+# Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.
+def order(words)
+  words.split.sort_by { |w| w[/\d/] }.join(' ')
+end
