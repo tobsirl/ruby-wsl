@@ -1250,3 +1250,8 @@ end
 def order(words)
   words.split.sort_by { |w| w[/\d/] }.join(' ')
 end
+
+# A Strange Trip to the Market 8kyu
+def is_lock_ness_monster(string)
+  string.include?("tree fiddy") || string.include?("3.50") || string.include?("three fifty")
+end
