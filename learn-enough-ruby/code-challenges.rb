@@ -1255,3 +1255,7 @@ end
 def is_lock_ness_monster(string)
   string.include?("tree fiddy") || string.include?("3.50") || string.include?("three fifty")
 end
+
+def is_lock_ness_monster(string)
+  ["tree fiddy", "3.50", "three fifty"].any? { |t| string.include? t } 
+end
