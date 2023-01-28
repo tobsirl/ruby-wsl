@@ -1259,3 +1259,12 @@ end
 def is_lock_ness_monster(string)
   ["tree fiddy", "3.50", "three fifty"].any? { |t| string.include? t } 
 end
+
+# Simple validation of a username with regex 8kyu
+# Write a simple regex to validate a username. Allowed characters are:
+# lowercase letters, numbers, underscore
+# Length should be between 4 and 16 characters (both included).
+# Should return true if the username is valid, false otherwise.
+def validate_usr(username)
+  username =~ /^[a-z0-9_]{4,16}$/ ? true : false
+end
