@@ -1276,3 +1276,10 @@ end
 def validate_usr(username)
   !!username[/\A[a-z0-9_]{4,16}\z/]
 end
+
+# Grasshopper - Combine strings 8kyu
+# Create a function named combineNames(combine_names in python, ruby) that accepts two parameters (first and last name).
+# The function should return the full name.
+def combine_names(first_name, last_name)
+  "#{first_name} #{last_name}"
+end
