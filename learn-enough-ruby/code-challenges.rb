@@ -1292,3 +1292,14 @@ end
 def is_sorted_and_how(arr)
   arr == arr.sort ? "yes, ascending" : arr == arr.sort.reverse ? "yes, descending" : "no"
 end
+
+# Regex Password Validation 5kyu
+# You need to write regex that will validate a password to make sure it meets the following criteria:
+# At least six characters long
+# contains a lowercase letter
+# contains an uppercase letter
+# contains a number
+# only contains alphanumeric characters(note that '_' is not alphanumeric)
+def validate(password)
+  password =~ /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/
+end
