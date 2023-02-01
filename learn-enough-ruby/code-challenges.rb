@@ -1303,3 +1303,9 @@ end
 def validate(password)
   password =~ /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/
 end
+
+# Summing a number's digits 7kyu
+# Write a function named sumDigits which takes a number as input and returns the sum of the absolute value of each of the number's decimal digits.
+def sumDigits(number)
+  number.abs.to_s.chars.map(&:to_i).sum
+end
