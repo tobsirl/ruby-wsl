@@ -1333,3 +1333,10 @@ def gps(s, x)
   return 0 if x.length <= 1
   (x.each_cons(2).map { |a, b| (3600 * (b - a) / s).floor }.max)
 end
+
+# JavaScript Array Filter 7kyu
+#  The solution would work like the following:
+# getEvenNumbers([2,4,5,6]) // should == [2,4,6]
+def get_even_numbers(arr)
+  arr.select(&:even?)
+end
