@@ -1340,3 +1340,9 @@ end
 def get_even_numbers(arr)
   arr.select(&:even?)
 end
+
+# Power of two 7kyu
+# Complete the function that determines if a given non-negative integer is a power of two.
+def power_of_two?(x)
+  x.to_s(2).count('1') == 1
+end
