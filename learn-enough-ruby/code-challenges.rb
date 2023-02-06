@@ -1346,3 +1346,8 @@ end
 def power_of_two?(x)
   x.to_s(2).count('1') == 1
 end
+
+# Printing Array elements with Comma delimiters 8kyu
+def printArray(array)
+  array.join(',')
+end
