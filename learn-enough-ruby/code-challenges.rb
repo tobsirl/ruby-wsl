@@ -1358,3 +1358,9 @@ end
 def gimme(input_array)
   input_array.index(input_array.sort[1])
 end
+
+# Validate code with simple regex 8kyu
+# Basic regex tasks. Write a function that takes in a numeric code of any length. The function should check if the code begins with 1, 2, or 3 and return true if so. Return false otherwise.
+def validate_code(code)
+  code.to_s =~ /^[123]/ ? true : false
+end
