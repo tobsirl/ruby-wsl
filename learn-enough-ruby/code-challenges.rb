@@ -1395,3 +1395,9 @@ end
 def get_number_from_string(s)
   s.gsub(/\D/, '').to_i
 end
+
+# Count the similey faces! 6kyu
+# Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
+def count_smileys(arr)
+  arr.count { |x| x =~ /[:;][-~]?[)D]/ }
+end
