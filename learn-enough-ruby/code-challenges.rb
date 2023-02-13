@@ -1401,3 +1401,9 @@ end
 def count_smileys(arr)
   arr.count { |x| x =~ /[:;][-~]?[)D]/ }
 end
+
+# Sum of Triangular Numbers 7kyu
+# Your task is to return the sum of Triangular Numbers up-to-and-including the nth Triangular Number.
+def sum_triangular_numbers(n)
+  (1..n).map { |x| (x * (x + 1)) / 2 }.sum
+end
