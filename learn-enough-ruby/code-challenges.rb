@@ -1407,3 +1407,9 @@ end
 def sum_triangular_numbers(n)
   (1..n).map { |x| (x * (x + 1)) / 2 }.sum
 end
+
+# CSV representation of array 8kyu
+# Write a function toCSVText/ToCsvText that takes in an array of arrays and returns a comma-separated values (CSV) string representing the same data.
+def to_csv_text(array)
+  array.map { |x| x.join(',') }.join("\n")
+end
