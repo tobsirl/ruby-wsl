@@ -1413,3 +1413,4 @@ end
 def to_csv_text(array)
   array.map { |x| x.join(',') }.join("\n")
 end
+
