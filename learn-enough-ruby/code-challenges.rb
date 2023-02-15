@@ -1414,3 +1414,20 @@ def to_csv_text(array)
   array.map { |x| x.join(',') }.join("\n")
 end
 
+# Who likes it? 6kyu
+# You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. 
+# We want to create the text that should be displayed next to such an item.
+def likes(names)
+  case names.length
+  when 0
+    "no one likes this"
+  when 1
+    "#{names[0]} likes this"
+  when 2
+    "#{names[0]} and #{names[1]} like this"
+  when 3
+    "#{names[0]}, #{names[1]} and #{names[2]} like this"
+  else
+    "#{names[0]}, #{names[1]} and #{names.length - 2} others like this"
+  end
+end
