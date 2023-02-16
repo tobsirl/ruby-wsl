@@ -1431,3 +1431,15 @@ def likes(names)
     "#{names[0]}, #{names[1]} and #{names.length - 2} others like this"
   end
 end
+
+# Sleigh Authentication 8kyu
+# Christmas is coming and many people dreamed of having a ride with Santa's sleigh. 
+# But, of course, only Santa himself is allowed to use this wonderful transportation. 
+# And in order to make sure, that only he can board the sleigh, there's an authentication mechanism.
+# Your task is to implement the authenticate() method of the sleigh
+# class, which takes the name of the person, who wants to board the sleigh and a secret password.
+class Sleigh
+  def authenticate(name, password)
+    name == "Santa Claus" && password == "Ho Ho Ho!"
+  end
+end
