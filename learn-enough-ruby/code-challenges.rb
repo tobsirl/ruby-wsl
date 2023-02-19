@@ -1464,3 +1464,8 @@ def find_nb(m)
   end
   m == 0 ? n : -1
 end
+
+# Find Multipless of a Number 8kyu
+def find_multiples(integer, limit)
+  (1..limit).select { |n| n % integer == 0 }
+end
