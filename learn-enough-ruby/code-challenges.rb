@@ -1494,3 +1494,9 @@ end
 def words_to_marks(string)
   string.chars.map { |x| x.ord - 96 }.sum
 end
+
+# Basic Training: Add item to an Array 8kyu
+# Add the value "codewars" to the websites array.
+# After your code executes the websites array should == ["codewars"]
+# The websites array has already been defined for you using the following code:
+$websites << "codewars"
