@@ -1509,3 +1509,23 @@ $websites << "codewars"
 def reverse_words(str)
   str.split.map { |x| x.reverse }.join(' ')
 end
+
+# Primes in numbers 5kyu
+# Given a positive number n > 1 find the prime factor decomposition of n. The result will be a string with the following form :
+# "(p1**n1)(p2**n2)...(pk**nk)"
+# with the p(i) in increasing order and n(i) empty if n(i) is 1.
+# Example: n = 86240 should return "(2**5)(5)(7**2)(11)"
+def primeFactors(n)
+  result = []
+  (2..n).each do |x|
+    if n % x == 0
+      count = 0
+      while n % x == 0
+        count += 1
+        n /= x
+      end
+      result << "(#{x}#{count > 1 ? "**#{count}" : ''})"
+    end
+  end
+  result.join
+end
