@@ -1500,3 +1500,12 @@ end
 # After your code executes the websites array should == ["codewars"]
 # The websites array has already been defined for you using the following code:
 $websites << "codewars"
+
+# Reverse words 7kyu
+# Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+# Examples
+# "This is an example!" ==> "sihT si na !elpmaxe"
+# "double  spaces"      ==> "elbuod  secaps"
+def reverse_words(str)
+  str.split.map { |x| x.reverse }.join(' ')
+end
