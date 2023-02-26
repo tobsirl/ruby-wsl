@@ -1599,4 +1599,16 @@ end
 # If both characters are the same case, return 1
 # If both characters are letters, but not the same case, return 0
 # Examples
+# 'a' and 'g' returns 1
+# 'A' and 'C' returns 1
+# 'b' and 'G' returns 0
+# 'B' and 'g' returns 0
+# '0' and '?' returns -1
+def same_case?(a, b)
+  if a =~ /[A-Za-z]/ && b =~ /[A-Za-z]/
+    a == a.upcase && b == b.upcase || a == a.downcase && b == b.downcase ? 1 : 0
+  else
+    -1
+  end
+end
 
