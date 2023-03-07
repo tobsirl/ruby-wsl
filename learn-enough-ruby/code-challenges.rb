@@ -1703,3 +1703,17 @@ end
 def cookie(x)
   "Who ate the last cookie? It was #{x.class == String ? 'Zach' : x.class == Float || x.class == Fixnum ? 'Monica' : 'the dog'}!"
 end
+
+# Is the string uppercase? 8kyu
+# Create a method is_uppercase() to see whether the string is ALL CAPS. For example:
+# is_uppercase("c") == False
+# is_uppercase("C") == True
+# is_uppercase("hello I AM DONALD") == False
+# is_uppercase("HELLO I AM DONALD") == True
+# is_uppercase("ACSKLDFJSgSKLDFJSKLDFJ") == False
+# is_uppercase("ACSKLDFJSGSKLDFJSKLDFJ") == True
+class String
+  def is_upcase?
+    self == self.upcase
+  end
+end
