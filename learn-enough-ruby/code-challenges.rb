@@ -1717,3 +1717,11 @@ class String
     self == self.upcase
   end
 end
+
+# Highest Rank Number in an Array 6kyu
+# Complete the method which returns the number which is most frequent in the given input array. 
+# If there is a tie for most frequent number, return the largest number among them.
+# Note: no empty arrays will be given.
+def highest_rank(arr)
+  arr.group_by { |i| i }.max_by { |k, v| v.size }[0]
+end
