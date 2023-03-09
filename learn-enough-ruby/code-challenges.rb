@@ -1732,3 +1732,13 @@ end
 def vowel_indices(word)
   word.chars.map.with_index { |i, index| index + 1 if 'aeiouy'.include?(i.downcase) }.compact
 end
+
+# Price of Mangoes 8kyu
+# There's a "3 for 2" (or "2+1" if you like) offer on mangoes. For a given price and quantity, calculate the total cost of the mangoes.
+# Examples
+# mango(3, 3) ==> 2
+# mango(9, 5) ==> 30
+def mango(quantity, price)
+  (quantity / 3) * 2 * price + (quantity % 3) * price
+end
+
