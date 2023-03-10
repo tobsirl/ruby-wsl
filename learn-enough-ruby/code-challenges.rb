@@ -1742,3 +1742,12 @@ def mango(quantity, price)
   (quantity / 3) * 2 * price + (quantity % 3) * price
 end
 
+# Sum of Multiples 8kyu
+# Find the sum of all multiples of n below m
+# Keep in Mind
+# n and m are natural numbers (positive integers)
+# m is excluded from the multiples
+def sum_mul(n, m)
+  n < m ? (n...m).select { |i| i % n == 0 }.reduce(:+) : 'INVALID'
+end
+
