@@ -1751,3 +1751,8 @@ def sum_mul(n, m)
   n < m ? (n...m).select { |i| i % n == 0 }.reduce(:+) : 'INVALID'
 end
 
+# Sum of Odd Cubed Numbers 7kyu
+# Find the sum of the odd numbers within an array, after cubing the initial integers. The function should return undefined/None/nil/NULL if any of the values aren't numbers.
+def cube_odd(arr)
+  arr.all? { |i| i.is_a? Numeric } ? arr.select { |i| i.odd? }.map { |i| i ** 3 }.reduce(:+) : nil
+end
