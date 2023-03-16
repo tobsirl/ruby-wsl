@@ -1797,3 +1797,9 @@ end
 def solve(arr)
   arr.map { |i| i.chars.select.with_index { |i, index| i.downcase == ('a'..'z').to_a[index] }.size }
 end
+
+# Sum of angles 7kyu
+# Find the total sum of angles in an n sided shape. N will be greater than 2.
+def angle(n)
+  (n - 2) * 180
+end
