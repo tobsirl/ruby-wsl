@@ -1812,3 +1812,10 @@ end
 def max_diff(lst)
   lst.empty? ? 0 : lst.max - lst.min
 end
+
+# Most digits 7kyu
+# Find the number with the most digits.
+# If two numbers in the argument array have the same number of digits, return the first one in the array.
+def find_longest(arr)
+  arr.max_by { |i| i.to_s.size }
+end
