@@ -1844,3 +1844,13 @@ end
 def predict_age(age_1, age_2, age_3, age_4, age_5, age_6, age_7, age_8)
   (Math.sqrt(age_1 ** 2 + age_2 ** 2 + age_3 ** 2 + age_4 ** 2 + age_5 ** 2 + age_6 ** 2 + age_7 ** 2 + age_8 ** 2) / 2).floor
 end
+
+# Rot13 5kyu
+# ROT13 is a simple letter substitution cipher that replaces a letter with the letter 13 letters after it in the alphabet. 
+# ROT13 is an example of the Caesar cipher.
+# Create a function that takes a string and returns the string ciphered with Rot13. 
+# If there are numbers or special characters included in the string, they should be returned as they are. 
+# Only letters from the latin/english alphabet should be shifted, like in the original Rot13 "implementation".
+def rot13(string)
+  string.tr('A-Za-z', 'N-ZA-Mn-za-m')
+end
