@@ -37,3 +37,9 @@ class Bicycle
     end
   end
 end
+
+bike = Bicycle.new(style: :mountain, size: 'S', front_shock: 'Manitou', rear_shock: 'Fox')
+puts bike.spares
+
+bike = Bicycle.new(style: :road, size: 'M', tape_color: 'red')
+puts bike.spares
