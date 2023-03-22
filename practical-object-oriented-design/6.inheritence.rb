@@ -27,4 +27,13 @@ class Bicycle
     @front_shock = opts[:front_shock]
     @rear_shock  = opts[:rear_shock]
   end
+
+  # checking 'style' starts down a slippery slope
+  def spares
+    if style == :road
+      { chain: '10-speed', tire_size: '23', tape_color: tape_color }
+    else
+      { chain: '10-speed', tire_size: '2.1', rear_shock: rear_shock }
+    end
+  end
 end
