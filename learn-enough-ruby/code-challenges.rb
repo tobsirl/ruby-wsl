@@ -1879,3 +1879,10 @@ end
 def find_average(nums)
   nums.reduce(:+) / nums.size.to_f rescue 0
 end
+
+# Divide and Conquer 7kyu
+# Given a mixed array of number and string representations of integers, add up the string integers and subtract this from the total of the non-string integers.
+# Return as a number.
+def div_con(x)
+  x.map { |i| i.is_a?(String) ? -i.to_i : i }.reduce(:+)
+end
