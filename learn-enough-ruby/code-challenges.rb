@@ -1886,3 +1886,11 @@ end
 def div_con(x)
   x.map { |i| i.is_a?(String) ? -i.to_i : i }.reduce(:+)
 end
+
+# Number of Decimal Digits 7kyu
+# Determine the total number of digits in the integer (n>=0) given as input to the function. 
+# For example, 9 is a single digit, 66 has 2 digits and 128685 has 6 digits.
+# Be careful to avoid overflows/underflows.
+def digits(n)
+  n.to_s.size
+end
