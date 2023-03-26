@@ -1921,3 +1921,9 @@ def min_sum(arr)
   end
   result
 end
+
+# get ascii value of character
+# Write a function getASCII which inputs a character and returns the corresponding ascii value for that character.
+def get_ascii(c)
+  c.ord
+end
