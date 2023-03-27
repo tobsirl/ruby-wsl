@@ -1940,3 +1940,11 @@ end
 def remove(s)
   s.gsub(/!+/, '') + '!'
 end
+
+def remove(s)
+  s.delete('!') << '!'
+end
+
+def remove(s)
+  s.tr("!","") + "!"
+end
