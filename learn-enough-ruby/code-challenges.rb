@@ -1927,3 +1927,16 @@ end
 def get_ascii(c)
   c.ord
 end
+
+# Exclamation marks series #4: Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string
+# Remove all exclamation marks from sentence except at the end.
+# Examples
+# remove("Hi!") === "Hi!"
+# remove("Hi!!!") === "Hi!!!"
+# remove("!Hi") === "Hi!"
+# remove("!Hi!") === "Hi!"
+# remove("Hi! Hi!") === "Hi Hi!"
+# remove("Hi") === "Hi!"
+def remove(s)
+  s.gsub(/!+/, '') + '!'
+end
