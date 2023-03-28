@@ -1958,3 +1958,8 @@ end
 def count_red_beads(n)
   n < 2 ? 0 : (n - 1) * 2
 end
+
+def count_red_beads n 
+  return 0 if n < 2
+  2 * (n-1)
+end 
