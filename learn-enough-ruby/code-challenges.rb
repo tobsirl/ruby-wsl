@@ -1990,3 +1990,14 @@ end
 def comp(array1, array2)
   array1.nil? || array2.nil? ? false : array1.sort.map { |i| i * i } == array2.sort
 end
+
+# Thinkful - Number Drills: Blue and red marbles 8kyu
+# You have a bunch of marbles. There are blue ones and red ones. You take a handful of marbles out of the bag, randomly, and count how many of each color you get. You repeat this a bunch of times, counting the blue and red marbles each time, and then calculate the ratio of blue to red at the end.
+# You are curious about whether the number of blue ones is consistently higher than the number of red ones. To test this, you decide to do an experiment: You fill another bag with a bunch of blue and red marbles and repeat the drawing/conclusion process from above.
+# The function you are going to write will have several parameters. The first parameter will be the number of blue marbles you put into the bag. The second parameter will be the number of red marbles. The third parameter will be the number of times to draw marbles, count them, and calculate the ratio of blue to red marbles.
+# The function should return a number which represents the average ratio of blue to red marbles. Each time you calculate the ratio you get a different answer, so to get an average you need to add all of the ratios together and divide by the total number of times you did the calculation.
+# For example, if you put 5 blue marbles and 6 red marbles in the bag and did this 10 times, your function should return 1.1666666666666667.
+# The return value should be a number, so an integer (1,2,3) is fine, but a decimal (1.0, 2.0, 3.0) is not.
+def guess_blue(blue_start, red_start, blue_pulled, red_pulled)
+  (blue_start - blue_pulled).to_f / (blue_start - blue_pulled + red_start - red_pulled)
+end
