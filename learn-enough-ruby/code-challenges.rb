@@ -2062,3 +2062,22 @@ end
 def square_area(a)
   ((2 * a / Math::PI)**2).round(2)
 end
+
+# Parts of a list 7kyu
+# Write a function partlist that gives all the ways to divide a list (an array) of at least two elements into two non-empty parts.
+# Each two non empty parts will be in a pair (or an array for languages without tuples or a structin C - C: see Examples test Cases - )
+# Each part will be in a string
+# Elements of a pair must be in the same order as in the original array.
+# Example:
+# a = ["az", "toto", "picaro", "zone", "kiwi"] -->
+# [["az", "toto picaro zone kiwi"], ["az toto", "picaro zone kiwi"], ["az toto picaro", "zone kiwi"], ["az toto picaro zone", "kiwi"]]
+def partlist(arr)
+  return [] if arr.length < 2
+  result = []
+  (arr.length - 1).times do |i|
+    result << [arr[0..i].join(' '), arr[i + 1..-1].join(' ')]
+  end
+  result
+end
+
+
