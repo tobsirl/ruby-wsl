@@ -5,3 +5,11 @@
 def last(x)
   x.split.sort_by { |word| word[-1] }
 end
+
+# Filter the number 7kyu
+# Oh no! The number has been mixed up with the text. Your goal is to retreive the number from the text, can you return the number back to it's original state?
+# Task
+# Your task is to return a number from a string.
+def FilterString(string)
+  string.gsub(/\D/, '').to_i
+end
