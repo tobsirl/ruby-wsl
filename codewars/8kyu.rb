@@ -14,3 +14,12 @@ def positive_sum(arr)
   arr.select(&:positive?).sum
 end
 
+# Count of positives / sum of negatives 8kyu
+# Given an array of integers.
+# Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers.
+# If the input array is empty or null, return an empty array.
+# Example [1,-4,7,12] => [2, -5]
+def count_positives_sum_negatives(lst)
+  return [] if lst.nil? || lst.empty?
+  [lst.count(&:positive?), lst.select(&:negative?).sum]
+end
