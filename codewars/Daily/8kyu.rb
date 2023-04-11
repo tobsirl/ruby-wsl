@@ -23,3 +23,22 @@ def count_positives_sum_negatives(lst)
   return [] if lst.nil? || lst.empty?
   [lst.count(&:positive?), lst.select(&:negative?).sum]
 end
+
+# Classy Classes 8kyu
+# Basic Classes, this kata is mainly aimed at the new JS ES6 Update introducing classes
+# Task
+# Your task is to complete this Class, the Person class has been created. 
+# You must fill in the Constructor method to accept a name as string and an age as number, 
+# complete the get Info property and getInfo method/Info getter which should return johns age is 34
+class Person
+  attr_accessor :name, :age
+  def initialize(name, age)
+    @name = name
+    @age = age
+  end
+
+  def info
+    "#{name}s age is #{age}"
+  end
+end
+
