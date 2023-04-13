@@ -53,3 +53,18 @@ class Cat < Animal
   end
 end
 
+# Playing with cubes 1 8kyu
+# Create a public class called Cube without a constructor which gets one single private Integer variable Side,
+# a getter GetSide() and a setter SetSide(int num) method for this property.
+# Actually, getter and setter methods are not the common way to write this code in C#.
+# In the next kata of this series, we gonna refactor the code and make it a bit more professional...
+class Cube
+  attr_accessor :side
+  def get_side
+    side || 0
+  end
+
+  def set_side(num)
+    self.side = num
+  end
+end
