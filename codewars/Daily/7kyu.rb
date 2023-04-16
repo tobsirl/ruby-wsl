@@ -13,3 +13,10 @@ end
 def FilterString(string)
   string.gsub(/\D/, '').to_i
 end
+
+# Maximum Triplet Sum (Array Series #7)
+# Task
+# Given an array/list [] of n integers , find maximum triplet sum in the array Without duplications .
+def max_tri_sum(numbers)
+  numbers.uniq.max(3).sum
+end
