@@ -113,3 +113,17 @@ class Guesser
   end
 end
 
+# Is the string uppercase? 8kyu
+# Create a method to see whether the string is ALL CAPS.
+# For example:
+# is_uppercase("c") == false
+# is_uppercase("C") == true
+# is_uppercase("hello I AM DONALD") == false
+# is_uppercase("HELLO I AM DONALD") == true
+# is_uppercase("ACSKLDFJSgSKLDFJSKLDFJ") == false
+# is_uppercase("ACSKLDFJSGSKLDFJSKLDFJ") == true
+class String
+  def is_upcase?
+    self == upcase 
+  end
+end
