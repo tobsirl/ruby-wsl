@@ -142,3 +142,10 @@ def quote(fighter)
   fighter.downcase == 'george saint pierre' ? "I am not impressed by your performance." : "I'd like to take this chance to apologize.. To absolutely NOBODY!"
 end
 
+# Geometry Basics: Distance between points in 2D 8kyu
+# This series of katas will introduce you to basics of doing geometry with computers.
+# Point objects have x, y attributes. Write a function calculating distance between Point a and Point b.
+# Tests round answers to 6 decimal places.
+def distance_between_points(a, b)
+  Math.hypot(a.x - b.x, a.y - b.y)
+end
