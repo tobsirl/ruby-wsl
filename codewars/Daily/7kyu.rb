@@ -49,3 +49,14 @@ def movie(card, ticket, perc)
   end
   n
 end
+
+# Simple remove duplicates 7kyu
+# Remove the duplicates from a list of integers, keeping the last ( rightmost ) occurrence of each element.
+# # Example:
+# #   solve([3, 4, 4, 3, 6, 3]) # => [4, 6, 3]
+# #   -- remove the first 3
+# #   -- remove 4 because it occurs twice
+# #   -- remove the second 3
+def solve(arr)
+  arr.reverse.uniq.reverse
+end
