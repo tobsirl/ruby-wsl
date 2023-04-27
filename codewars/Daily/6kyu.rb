@@ -31,3 +31,18 @@ puts up_array([0, 4, 3])
 def is_valid_walk(walk)
   walk.count('n') == walk.count('s') && walk.count('e') == walk.count('w') && walk.length == 10
 end
+
+# Consonant value 6kyu
+# https://www.codewars.com/kata/59c633e7dcc4053512000073/train/ruby
+# Given a lowercase string that has alphabetic characters only and no spaces, return the highest value of consonant substrings.
+# Consonants are any letters of the alpahabet except "aeiou".
+# We shall assign the following values: a = 1, b = 2, c = 3, .... z = 26.
+# For example, for the word "zodiacs", let's cross out the vowels. We get: "z o d ia cs"
+# -- The consonant substrings are: "z" , "d" , "cs" and the values are z = 26,d = 4,cs = 3 + 19 = 22. The highest is 26.
+# solve("zodiacs") = 26
+# For the word "strength", solve("strength") = 57
+# -- The consonant substrings are: "str" and "ngth" with values str = 19 + 20 + 18 = 57 and ngh = 14 + 7 + 8 = 29. 
+# The highest is 57.
+def solve(s)
+  s.split(/[aeiou]/).map { |word| word.chars.map { |char| char.ord - 96 }.sum }.max
+end
