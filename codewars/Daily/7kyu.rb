@@ -79,3 +79,10 @@ end
 def over_the_road(address, n)
   2 * n + 1 - address
 end
+
+# Spacify 7kyu
+# Modify the spacify function so that it returns the given string with spaces insertedbetween each character.
+# spacify("hello world") // returns "h e l l o   w o r l d"
+def spacify(str)
+  str.chars.join(' ')
+end
