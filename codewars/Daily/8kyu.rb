@@ -248,3 +248,13 @@ end
 def correct_polish_letters(s)
   s.tr('ąćęłńóśźż', 'acelnoszz')
 end
+
+# Duck Duck Goose 8kyu
+# The objective of Duck, duck, goose is to walk in a circle, tapping on each player's head until one is finally chosen.
+# Task: Given an array of Player objects (an array of associative arrays in PHP) and an index (1-based), return the name of the chosen Player.
+# Example:
+# duck_duck_goose([a, b, c, d], 1) should return a.name
+# duck_duck_goose([a, b, c, d], 5) should return a.name
+def duck_duck_goose(players, goose)
+  players[(goose - 1) % players.length].name
+end
