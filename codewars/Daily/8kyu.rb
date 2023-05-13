@@ -283,3 +283,12 @@ def find_slope(points)
   return 'undefined' if points[2] - points[0] == 0
   ((points[3] - points[1]) / (points[2] - points[0])).to_s
 end
+
+# Regexp Basics - is it a digit? 8kyu
+# https://www.codewars.com/kata/567bf4f7ee34510f69000032/train/ruby
+# Implement String#digit? (in Java StringUtils.isDigit(String)), which should return true if given object is a digit (0-9), false otherwise.
+class String
+  def digit?
+    self.match?(/\A\d\z/)
+  end
+end
