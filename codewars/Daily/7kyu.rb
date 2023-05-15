@@ -185,3 +185,42 @@ end
 def squares(x, n)
   n.times.map { |i| x**(2**i) }
 end
+
+# Building blocks 7kyu
+# https://www.codewars.com/kata/55b75fcf67e558d3750000a3/train/ruby
+# Write a class Block that creates a block (Duh..)
+# ##Requirements
+# The constructor should take an array as an argument, this will contain 3 integers of the form [width, length, height] from which the Block should be created.
+# Define these methods:
+# `get_width()` return the width of the `Block`
+# `get_length()` return the length of the `Block`
+# `get_height()` return the height of the `Block`
+# `get_volume()` return the volume of the `Block`
+# `get_surface_area()` return the surface area of the `Block`
+class Block
+  def initialize(array)
+    @width = array[0]
+    @length = array[1]
+    @height = array[2]
+  end
+
+  def get_width
+    @width
+  end
+
+  def get_length
+    @length
+  end
+
+  def get_height
+    @height
+  end
+
+  def get_volume
+    @width * @length * @height
+  end
+
+  def get_surface_area
+    2 * (@width * @length + @width * @height + @length * @height)
+  end
+end
