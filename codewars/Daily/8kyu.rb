@@ -292,3 +292,14 @@ class String
     self.match?(/\A\d\z/)
   end
 end
+
+# Evil or Odious
+# https://www.codewars.com/kata/56fcfad9c7e1fa2472000034/train/ruby
+# The number n is Evil if it has an even number of 1's in its binary representation.
+# First ten: 3, 5, 6, 9, 10, 12, 15, 17, 18, 20
+# The number n is Odious if it has an odd number of 1's in its binary representation.
+# First ten: 1, 2, 4, 7, 8, 11, 13, 14, 16, 19
+# You have to write a function that determine if a number is Evil of Odious, function should return "It's Evil!" in case of evil number and "It's Odious!" in case of odious number.
+def evil(n)
+  n.to_s(2).count('1').even? ? "It's Evil!" : "It's Odious!"
+end
