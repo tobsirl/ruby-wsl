@@ -303,3 +303,22 @@ end
 def evil(n)
   n.to_s(2).count('1').even? ? "It's Evil!" : "It's Odious!"
 end
+
+# Grader 8kyu
+# https://www.codewars.com/kata/53d16bd82578b1fb5b00128c/train/ruby
+# Create a function that takes a number as an argument and returns a grade based on that number.
+# Score Grade
+# Anything greater than 1 or less than 0.6  'F'
+# 0.9 or greater  "A"
+# 0.8 or greater  "B"
+# 0.7 or greater  "C"
+# 0.6 or greater  "D"
+def grader(score)
+  case score
+  when 0.9..1 then 'A'
+  when 0.8..0.9 then 'B'
+  when 0.7..0.8 then 'C'
+  when 0.6..0.7 then 'D'
+  else 'F'
+  end
+end
