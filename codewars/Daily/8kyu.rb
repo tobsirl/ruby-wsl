@@ -339,3 +339,11 @@ end
 def nba_extrap(ppg, mpg)
   mpg.zero? ? 0 : (ppg * 48.0 / mpg).round(1)
 end
+
+# Ensure question 8kyu
+# https://www.codewars.com/kata/5866fc43395d9138a7000006/train/ruby
+# Given a string, write a function that returns the string with a question mark ("?") appends to the end,
+# unless the original string ends with a question mark, in which case, returns the original string.
+def ensure_question(s)
+  s.end_with?('?') ? s : s + '?'
+end
