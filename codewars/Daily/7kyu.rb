@@ -328,3 +328,17 @@ def vowel_2_index(string)
   string.chars.map.with_index { |char, index| vowels.include?(char.downcase) ? index + 1 : char }.join
 end
 
+# Numbers to Letters 7kyu
+# https://www.codewars.com/kata/57ebaa8f7b45ef590c00000c/train/ruby
+# Given an array of numbers (in string format), you must return a string.
+# The numbers correspond to the letters of the alphabet in reverse order: a=26, z=1 etc.
+# You should also account for '!', '?' and ' ' that are represented by '27', '28' and '29' respectively.
+# All inputs will be valid.
+def switcher(arr)
+  alphabet = ('a'..'z').to_a.reverse
+  alphabet << '!'
+  alphabet << '?'
+  alphabet << ' '
+  arr.map { |char| alphabet[char.to_i - 1] }.join
+end
+
