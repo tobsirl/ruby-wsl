@@ -385,3 +385,17 @@ def find_digit(num, nth)
   num = num.abs.to_s
   num[-nth].to_i
 end
+
+# Discover The Original Price 7kyu
+# https://www.codewars.com/kata/552564a82142d701f5001228/train/ruby
+# We need to write some code to return the original price of a product,
+# the return type must be of type decimal and the number must be rounded to two decimal places.
+# We will be given the sale price (discounted price), and the sale percentage, our job is to figure out the original price.
+# For example:
+# Given an item at $75 sale price after applying a 25% discount, the function should return the original price of that item before applying the sale percentage, which is ($100.00)
+#   reverse(75,25) => 100.00
+# Note: The return type must be of type decimal and the number must be rounded to two decimal places.
+def discover_original_price(discounted_price, sale_percentage)
+  (discounted_price / (1 - (sale_percentage.to_f / 100))).round(2)
+end
+  
