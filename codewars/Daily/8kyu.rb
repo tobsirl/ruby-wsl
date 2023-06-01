@@ -359,3 +359,17 @@ end
 def pillars(num_of_pillars, dist, width)
   num_of_pillars > 1 ? (num_of_pillars - 1) * dist * 100 + (num_of_pillars - 2) * width : 0
 end
+
+# Freudian translator 8kyu
+# https://www.codewars.com/kata/5713bc89c82eff33c60009f7/train/ruby
+# You probably know the 42 number as "The answer to life, the universe and everything" according to Douglas Adams' "The Hitchhiker's Guide to the Galaxy".
+# For Freud, the answer was quite different.
+# In the society he lived in, people - women in particular - had to repress their sexual needs and desires. 
+# This was simply how the society was at the time. Freud then wanted to study the illnesses created by this, 
+# and so he digged to the root of their desires. 
+# This led to some of the most important psychoanalytic theories to this day, Freud being the father of psychoanalysis.
+# Now, basically, when a person hears about Freud, s/he hears "sex" because for Freud, everything was related to, and explained by sex.
+# In this kata, the function will take a string as its argument, and return a string with every word replaced by the explanation to everything, according to Freud. Note that an empty string, or no arguments, should return an empty string.
+def to_freud(sentence)
+  sentence.split.map { |word| word.empty? ? "" : "sex" }.join(" ")
+end
