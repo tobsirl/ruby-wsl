@@ -398,4 +398,49 @@ end
 def discover_original_price(discounted_price, sale_percentage)
   (discounted_price / (1 - (sale_percentage.to_f / 100))).round(2)
 end
+
+# The Office II - Boredom Score 7kyu
+# https://www.codewars.com/kata/57ed4cef7b45ef8774000014/train/ruby
+# Every now and then people in the office moves teams or departments.
+# Depending what people are doing with their time they can become more or less boring.
+# Time to assess the current team.
+# You will be provided with an object(staff) containing the staff names as keys,
+# and the department they work in as values.
+# Each department has a different boredom assessment score, as follows:
+# accounts = 1
+# finance = 2
+# canteen = 10
+# regulation = 3
+# trading = 6
+# change = 6
+# IS = 8
+# retail = 5
+# cleaning = 4
+# pissing about = 25
+# Depending on the cumulative score of the team, return the appropriate sentiment:
+# <=80: 'kill me now'
+# < 100 & > 80: 'i can handle this'
+# 100 or over: 'party time!!'
+def boredom(staff)
+  boredom_score = 0
+  staff.each_value do |department|
+    boredom_score += case department
+                     when 'accounts' then 1
+                     when 'finance' then 2
+                     when 'canteen' then 10
+                     when 'regulation' then 3
+                     when 'trading' then 6
+                     when 'change' then 6
+                     when 'IS' then 8
+                     when 'retail' then 5
+                     when 'cleaning' then 4
+                     when 'pissing about' then 25
+                     end
+  end
+  case boredom_score
+  when 0..80 then 'kill me now'
+  when 81..99 then 'i can handle this'
+  else 'party time!!'
+  end
+end
   
