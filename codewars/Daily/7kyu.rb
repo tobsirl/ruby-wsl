@@ -532,3 +532,20 @@ end
 def solve(s)
   [s.count('A-Z'), s.count('a-z'), s.count('0-9'), s.count('^a-zA-Z0-9')]
 end
+
+# Remove All The Marked Elements of a List 7kyu
+# https://www.codewars.com/kata/563089b9b7be03472d00002b/train/ruby
+# We need a method in the List Class that may remove from a given list of integers, all the values contained in a second list.
+# The method remove_() will accept two arguments, a list of an uncertain amount of integers, integer_list
+# and a second list that contains integer values, too, values_list.
+# The method will output a list with all the integers that are not in values_list
+# Like the following:
+# integer_list =  [1, 1, 2 ,3 ,1 ,2 ,3 ,4]
+# values_list = [1, 3]
+# remove_(integer_list, values_list) == [2, 2, 4]
+# Enjoy it!!
+class Array
+  def remove_(integer_list, values_list)
+    integer_list.reject { |num| values_list.include?(num) }
+  end
+end
