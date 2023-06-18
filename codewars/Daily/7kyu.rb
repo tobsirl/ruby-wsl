@@ -620,3 +620,14 @@ end
 def wordValue(arr)
   arr.map.with_index { |word, index| word.gsub(' ', '').chars.map { |char| char.ord - 96 }.reduce(:+) * (index + 1) }
 end
+
+# Return the first M multiples of N 7kyu
+# https://www.codewars.com/kata/593c9175933500f33400003e/train/ruby
+# Implement a function, multiples(m, n), which returns an array of the first m multiples of the real number n. Assume that m is a positive integer.
+# Ex.
+# multiples(3, 5.0)
+# should return
+# [5.0, 10.0, 15.0]
+def multiples(m, n)
+  (1..m).map { |num| num * n }
+end
