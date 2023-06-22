@@ -507,3 +507,8 @@ end
 def quadratic(x1, x2)
   [1, -(x1 + x2), x1 * x2]
 end
+
+# The 'if' function 8kyu
+def _if(bool, ifTrue, ifFalse)
+  bool ? ifTrue.call : ifFalse.call  
+end
