@@ -91,3 +91,15 @@ def delete_nth(order, max_e)
     arr << num unless arr.count(num) >= max_e
   end
 end
+
+# Multiplication table 6kyu
+# https://www.codewars.com/kata/534d2f5b5371ecf8d2000a08/train/ruby
+# Your task, is to create NxN multiplication table, of size provided in parameter.
+# for example, when given size is 3:
+# 1 2 3
+# 2 4 6
+# 3 6 9
+# for given example, the return value should be: [[1,2,3],[2,4,6],[3,6,9]]
+def multiplication_table(size)
+  (1..size).map { |num| (1..size).map { |n| n * num } }
+end
