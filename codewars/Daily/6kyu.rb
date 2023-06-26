@@ -103,3 +103,5 @@ end
 def multiplication_table(size)
   (1..size).map { |num| (1..size).map { |n| n * num } }
 end
+
+
