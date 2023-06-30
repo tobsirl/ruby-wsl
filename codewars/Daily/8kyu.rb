@@ -526,3 +526,22 @@ end
 def two_highest(list)
   list.is_a?(Array) ? list.uniq.max(2) : false
 end
+
+# Barking mad 8kyu
+# https://www.codewars.com/kata/54dba07f03e88a4cec000caf/train/ruby
+# Teach snoopy and scooby doo how to bark using object methods. Currently only snoopy can bark and not scooby doo.
+# snoopy.bark() #return "Woof"
+# scoobydoo.bark() #undefined
+# Use method prototypes to enable all Dogs to bark.
+class Dog
+  def def initialize(breed)
+    @breed = breed
+  end
+
+  def bark
+    "Woof"
+  end
+end
+
+snoopy = Dog.new("Beagle")
+scoobydoo = Dog.new("Great Dane")
