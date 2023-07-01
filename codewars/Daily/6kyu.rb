@@ -125,3 +125,23 @@ def revrot(str, sz)
     chunk.chars.map(&:to_i).sum % 2 == 0 ? chunk.reverse : chunk[1..-1] + chunk[0]
   end.join
 end
+
+# Linked Lists - Length & Count 6kyu
+# https://www.codewars.com/kata/55beec7dd347078289000021/train/ruby
+# Linked Lists - Length & Count
+# Implement Length() to count the number of nodes in a linked list.
+# length(null) === 0
+# length(1 -> 2 -> 3 -> null) === 3
+# Implement Count() to count the occurrences of an integer in a linked list.
+# count(null, 1) === 0
+# count(1 -> 2 -> 3 -> null, 1) === 1
+# count(1 -> 2 -> 3 -> null, 3) === 1
+def length(node)
+  return 0 if node.nil?
+  1 + length(node.next)
+end
+
+def count(node, data)
+  return 0 if node.nil?
+  (node.data == data ? 1 : 0) + count(node.next, data)
+end
