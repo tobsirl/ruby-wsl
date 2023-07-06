@@ -745,3 +745,11 @@ end
 def evens_and_odds(n)
   n.even? ? n.to_s(2) : n.to_s(16)
 end
+
+# No oddities here 7kyu
+# https://www.codewars.com/kata/51fd6bc82bc150b28e0000ce/train/ruby
+# Write a small function that returns the values of an array that are not odd.
+# All values in the array will be integers. Return the good values in the order they are given.
+def no_odds(values)
+  values.select(&:even?)
+end
