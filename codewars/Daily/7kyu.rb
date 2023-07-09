@@ -773,3 +773,13 @@ end
 def potatoes(p0, w0, p1)
   w0 * (100 - p0) / (100 - p1)
 end
+
+# SevenAte9 7kyu
+# https://www.codewars.com/kata/559f44187fa851efad000087/train/ruby
+# Write a function that removes every lone 9 that is inbetween 7s.
+# seven_ate9('79712312') => '7712312'
+# seven_ate9('79797') => '777'
+# Input: String Output:  String
+def seven_ate9(str)
+  str.gsub(/(?<=7)9(?=7)/, '')
+end
