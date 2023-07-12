@@ -783,3 +783,13 @@ end
 def seven_ate9(str)
   str.gsub(/(?<=7)9(?=7)/, '')
 end
+
+# Changing letters 7kyu
+# https://www.codewars.com/kata/5831c204a31721e2ae000294/train/ruby
+# When provided with a String, capitalize all vowels
+# For example:
+# Input : "Hello World!"
+# Output : "HEllO WOrld!"
+def swap_vowel_case(str)
+  str.tr('aeiouAEIOU', 'AEIOUaeiou')
+end
