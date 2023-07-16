@@ -594,3 +594,15 @@ end
 def playerRankUp(points)
   points >= 100 ? "Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up." : false
 end
+
+# Find the Integral 8kyu
+# https://www.codewars.com/kata/59811fd8a070625d4c000013/train/ruby
+# Create a function that finds the integral of the expression passed.
+# In order to find the integral all you need to do is add one to the exponent (the second argument), and divide the coefficient by that new number (the first argument).
+# In 3x^2, for example, the integral would be 1x^3 (we added 1 to the exponent, and divided the coefficient by that new number).
+# integrate(3,2) // => "1x^3"
+# integrate(9,5) // => "1.5x^6"
+# Note that the output should be a string. The coefficient is always positive. Neither number will ever be 0.
+def integrate(coefficient, exponent)
+  "#{coefficient / (exponent + 1)}x^#{exponent + 1}"
+end
