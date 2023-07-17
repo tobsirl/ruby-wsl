@@ -838,3 +838,11 @@ end
 def filter_lucky(arr)
   arr.select { |num| num.to_s.include?('7') }
 end
+
+# Insert dashes 7kyu
+# https://www.codewars.com/kata/55960bbb182094bc4800007b/train/ruby
+# Write a function insertDash(num)/InsertDash(int num) that will insert dashes ('-') between each two odd numbers in num. For example: if num is 454793 the output should be 4547-9-3. Don't count zero as an odd number.
+# Note that the number will always be non-negative (>= 0).
+def insert_dash(num)
+  num.to_s.gsub(/([13579])(?=[13579])/, '\1-')
+end
