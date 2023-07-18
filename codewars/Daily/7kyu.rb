@@ -846,3 +846,20 @@ end
 def insert_dash(num)
   num.to_s.gsub(/([13579])(?=[13579])/, '\1-')
 end
+
+# All Star Code Challenge #22 7kyu
+# https://www.codewars.com/kata/5865cff66b5699883f0001aa/train/ruby
+# Create a function called toTime() that takes an integer argument of seconds and converts the value into a string describing how many hours and minutes comprise that many seconds.
+# Any remaining seconds left over are ignored.
+# Note:
+# The string output needs to be in the specific form - "X hour(s) and X minute(s)"
+# toTime(3600); // => '1 hour(s) and 0 minute(s)'
+# toTime(3601); // => '1 hour(s) and 0 minute(s)'
+# toTime(3500); // => '0 hour(s) and 58 minute(s)'
+# toTime(323500); // => '89 hour(s) and 51 minute(s)'
+# toTime(0); // => '0 hour(s) and 0 minute(s)'
+def to_time(seconds)
+  hours = seconds / 3600
+  minutes = (seconds % 3600) / 60
+  "#{hours} hour(s) and #{minutes} minute(s)"
+end
