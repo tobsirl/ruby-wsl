@@ -863,3 +863,15 @@ def to_time(seconds)
   minutes = (seconds % 3600) / 60
   "#{hours} hour(s) and #{minutes} minute(s)"
 end
+
+# Band name generator 7kyu
+# https://www.codewars.com/kata/59727ff285281a44e3000011/train/ruby
+# My friend wants a new band name for her band. She like bands that use the formula: 'The' + a noun with first letter capitalized.
+# dolphin -> The Dolphin
+# However, when a noun STARTS and ENDS with the same letter, she likes to repeat the noun twice and connect them together with the first and last letter, combined into one word like so (WITHOUT a 'The' in front):
+# alaska -> Alaskalaska
+# europe -> Europeurope
+# Complete the function that takes in a noun as a string, and returns her preferred band name written as a string.
+def band_name_generator(name)
+  name[0] == name[-1] ? name.capitalize + name[1..-1] : 'The ' + name.capitalize
+end
