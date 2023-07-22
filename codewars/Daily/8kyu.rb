@@ -644,3 +644,12 @@ def define_suit(card)
   when "S" then "spades"
   end
 end
+
+# Wilson primes 8kyu
+# https://www.codewars.com/kata/55dc4520094bbaf50e0000cb/train/ruby
+# Wilson primes satisfy the following condition. Let P represent a prime number.
+# Then ((P-1)! + 1) / (P * P) should give a whole number.
+# Your task is to create a function that returns true if the given number is a Wilson prime.
+def am_i_wilson(p)
+  [5, 13, 563].include?(p)
+end
