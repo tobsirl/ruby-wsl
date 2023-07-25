@@ -183,3 +183,15 @@ class Array
     select(&:odd?)
   end
 end
+
+# Array Deep Count 6kyu
+# https://www.codewars.com/kata/596f72bbe7cd7296d1000029/train/ruby
+# You are given an array. Complete the function that returns the number of ALL elements within an array, including any nested arrays.
+# Examples
+# []          ==> 0
+# [1,2,3]     ==> 3
+# ["x", "y", ["z"]]  ==> 4
+# [1, 2, [3, 4, [5]]] ==> 7
+def deep_count(a)
+  a.map { |el| el.is_a?(Array) ? deep_count(el) + 1 : 1 }.sum
+end
