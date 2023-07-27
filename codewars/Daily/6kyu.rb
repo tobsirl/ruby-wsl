@@ -212,5 +212,9 @@ end
 # Note 2: do not modify the input array.
 def beggars(values, n)
   return Array.new(n, 0) if n == 0
-  (0...n).map { |index| values[index..-1].each_slice(n).map(&:first).sum }
+  result = Array.new(n, 0)
+  values.each_with_index do |value, index|
+    result[index % n] += value
+  end
+  result
 end
