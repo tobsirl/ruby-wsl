@@ -1011,3 +1011,10 @@ end
 def valid_spacing(s)
   s == s.split(' ').join(' ')
 end
+
+# Find min and max 7kyu
+# https://www.codewars.com/kata/57a1ae8c7cb1f31e4e000130/train/ruby
+# Implement a function that returns the minimal and the maximal value of a list (in this order).
+def get_min_max(seq)
+  [seq.min, seq.max]
+end
