@@ -1043,3 +1043,17 @@ end
 def string_merge(word1, word2, letter)
   word1[0...word1.index(letter)] + word2[word2.index(letter)..-1]
 end
+
+# Difference Of Squares 7kyu
+# https://www.codewars.com/kata/558f9f51e85b46e9fa000025/train/ruby
+# Find the difference between the sum of the squares of the first n natural numbers (1 <= n <= 100) and the square of their sum.
+# Example
+# For example, when n = 10:
+# The square of the sum of the numbers is:
+# (1 + 2 + ... + 10)**2 = 55**2 = 3025
+# The sum of the squares of the numbers is:
+# 1**2 + 2**2 + ... + 10**2 = 385
+# Hence the difference between square of the sum of the first ten natural numbers and the sum of the squares of those numbes is: 3025 - 385 = 2640
+def difference_of_squares(n)
+  (1..n).sum**2 - (1..n).map { |i| i**2 }.sum
+end
