@@ -55,3 +55,24 @@ def sum_pairs(ints, s)
   end
   nil
 end
+
+# Product of consecutive Fib numbers (5 kyu)
+# https://www.codewars.com/kata/5541f58a944b85ce6d00006a
+# The Fibonacci numbers are the numbers in the following integer sequence (Fn):
+# F0 = 0 F1 = 1 F(n) = F(n-1) + F(n-2)
+# Your task is to return the first element of the Fibonacci sequence that has the following property:
+# F(n) * F(n+1) = prod.
+# (Check if prod is a Fibonacci number too)
+# Example
+# productFib(714) # should return [21, 34, true],
+#                 # since F(8) = 21, F(9) = 34 and 714 = 21 * 34
+# productFib(800) # should return [34, 55, false],
+#                 # since F(8) = 21, F(9) = 34, F(10) = 55 and 21 * 34 < 800 < 34 * 55
+def productFib(prod)
+  fib = [0, 1]
+  while fib[0] * fib[1] < prod
+    fib = [fib[1], fib[0] + fib[1]]
+  end
+  fib[0] * fib[1] == prod ? fib + [true] : fib + [false]
+end
+
