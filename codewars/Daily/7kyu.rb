@@ -1124,4 +1124,14 @@ def capitalize(s, ind)
   s.chars.each_with_index.map { |char, i| ind.include?(i) ? char.upcase : char }.join
 end
 
-# 
+# Find Count of Most Frequent Item in an Array 7kyu
+# https://www.codewars.com/kata/56582133c932d8239900002e/train/ruby
+# Complete the function to find the count of the most frequent item of an array. You can assume that input is an array of integers.
+# For an empty array return 0
+# Example
+# input array: [3, -1, -1, -1, 2, 3, -1, 3, -1, 2, 4, 9, 3]
+# ouptut: 5
+# The most frequent number in the array is -1 and it occurs 5 times.
+def most_frequent_item_count(collection)
+  collection.group_by(&:itself).values.map(&:size).max || 0
+end
