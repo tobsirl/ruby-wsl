@@ -1143,3 +1143,17 @@ end
 def sum_of_integers_in_string(s)
   s.scan(/\d+/).map(&:to_i).sum
 end
+
+# Say hello! 7kyu
+# https://www.codewars.com/kata/55955a48a4e9c1a77500005a/train/ruby
+# Say hello!
+# Write a function to greet a person. Function will take name as input and greet the person by saying hello. 
+# Return null/nil if input is empty string or null/nil.
+# Example:
+# greet("Niks") === "hello Niks!";
+# greet("") === null; // Return null if input is empty string
+# greet(null) === null; // Return null if input is null
+def greet(name)
+  return nil if name.nil? || name.empty?
+  name ? "hello #{name}!" : nil
+end
