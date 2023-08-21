@@ -1157,3 +1157,12 @@ def greet(name)
   return nil if name.nil? || name.empty?
   name ? "hello #{name}!" : nil
 end
+
+# Return String of First Characters 7kyu
+# https://www.codewars.com/kata/5639bdcef2f9b06ce800005b/train/ruby
+# In this exercise, a string is passed to a method and a new string has to be returned with the first character of each word in the string.
+# For example:
+# "This Is A Test" ==> "TIAT"
+def make_string(s)
+  s.split.map { |word| word[0] }.join
+end
