@@ -242,3 +242,17 @@ class FileNameExtractor
     dirty_file_name[/^\d+_([^.]+\.[^.]+)/, 1]
   end
 end
+
+# Where is my parent!?(cry) 6kyu
+# https://www.codewars.com/kata/58539230879867a8cd00011c/train/ruby
+# Mothers arranged dance party for children in school.On that party there are only mothers and their children.
+# All are having great fun on dancing floor when suddenly all lights went out.Its dark night and no one can see eachother.
+# But you were flying nearby and you can see in the dark and have ability to teleport people anywhere you want.
+# Legend:
+# -Uppercase letters stands for mothers,lowercase stand for their children. I.E "A" mothers children are "aaaa".
+# -Function input:String contain only letters,Uppercase letters are unique.
+# Task:
+# Place all people in alphabetical order where Mothers are followed by their children.I.E "aAbaBb" => "AaaBbb".
+def find_children(dancing_brigade)
+  dancing_brigade.chars.sort_by { |char| [char.downcase, char] }.join
+end
